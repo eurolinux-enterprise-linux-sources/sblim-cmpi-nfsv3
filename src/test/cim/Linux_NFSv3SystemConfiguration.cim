@@ -1,0 +1,29 @@
+********************************************************************************
+class : Linux_NFSv3SystemConfiguration
+objectPath : Linux_NFSv3SystemConfiguration.SystemName="HOSTNAME",SystemCreationClassName="Linux_ComputerSystem",CreationClassName="Linux_NFSv3SystemConfiguration",Name="NFSv3"
+
+--------------------------------------------------------------------------------
+Instance                                                       enumInstanceNames
+
+--------------------------------------------------------------------------------
+Instance                                                           enumInstances
+
+--------------------------------------------------------------------------------
+Instance                                                                     get
+
+--------------------------------------------------------------------------------
+Instance								     set
+Expected Exception : NOT_SUPPORTED
+
+--------------------------------------------------------------------------------
+Instance                                                                  create
+Expected Exception : NOT_SUPPORTED
+
+--------------------------------------------------------------------------------
+Instance                                                                  delete
+Expected Exception : NOT_SUPPORTED
+
+--------------------------------------------------------------------------------
+Instance							       execQuery
+Expected Exception : NOT_SUPPORTED
+

@@ -1,0 +1,105 @@
+// ---------------------------------------------------------------------------
+// Linux_NFSv3SystemConfiguration.mof
+//
+// Copyright (c) IBM Corp. 2004, 2009
+//
+// THIS FILE IS PROVIDED UNDER THE TERMS OF THE ECLIPSE PUBLIC LICENSE
+// ("AGREEMENT"). ANY USE, REPRODUCTION OR DISTRIBUTION OF THIS FILE
+// CONSTITUTES RECIPIENTS ACCEPTANCE OF THE AGREEMENT.
+//
+// You can obtain a current copy of the Eclipse Public License from
+// http://www.opensource.org/licenses/eclipse-1.0.php
+//
+// Author:	Dr. Gareth S. Bestor <bestorga@us.ibm.com>
+// Description:	Linux_NFSv3SystemConfiguration mof template
+// Interface:	Common Manageability Programming Interface (CMPI)
+//
+// IMPORTANT: This file must be renamed to the desired new
+// Linux_NFSv3SystemConfiguration instance provider mof; e.g.
+//	mv Linux_NFSv3SystemConfiguration.mof Linux_NFSv3SystemConfiguration.mof
+// Then change all occurances of "Linux_NFSv3SystemConfiguration" in this file to, 
+// say, "Linux_NFSv3SystemConfiguration", change "Linux_NFSv3SystemSetting" to,
+// say, "Linux_NFSv3SystemSetting", and change "Linux_NFSv3SettingContext" to,
+// say, "Linux_NFSv3SettingContext".
+// DO NOT CHANGE ANY OF THE EXISTING PROPERTIES!
+// ---------------------------------------------------------------------------
+
+#pragma locale ("en_US")
+
+// Linux_NFSv3SystemConfiguration instance
+
+[Description
+	("Linux system configuration"),
+ Provider("cmpi:Linux_NFSv3SystemConfiguration") ]
+class Linux_NFSv3SystemConfiguration : CIM_SystemConfiguration
+{
+   // Linux_NFSv3SystemConfiguration Key Properties 
+
+   [Propagated ("CIM_System.Name"),
+    Key, MaxLen (256),
+    Description
+	("The scoping System's Name.") ]
+   string SystemName;
+
+   [Propagated ("CIM_System.CreationClassName"),
+    Key, MaxLen (256),
+    Description 
+	("The scoping System's CreationClassName.") ]
+   string SystemCreationClassName;
+
+   [Propagated ("CIM_SystemConfiguration.CreationClassName"),
+    Key, MaxLen (256),
+    Description
+	("CreationClassName indicates the name of the class or the subclass used "
+	 "in the creation of an instance. When used with the other key properties "
+	 "of this class, this property allows all instances of this class and its "
+	 "subclasses to be uniquely identified.") ]
+   string CreationClassName;
+
+   [Propagated ("CIM_SystemConfiguration.Name"),
+    Key, MaxLen (256),
+    Description
+	("The label by which the Configuration object is known.")]
+   string Name;
+
+
+   // Linux_NFSv3SystemConfiguration Config File Properties
+
+   [Propagated ("CIM_LogicalFile.Name"),
+    Description
+	("Name of the principal/base configuration file.") ]
+   string Filename;
+
+   [Propagated ("CIM_LogicalFile.Readable"),
+    Description
+	("Boolean indicating if the configuration file can be read.") ]
+   boolean Readable;
+
+   [Propagated ("CIM_LogicalFile.Writeable"),
+    Description
+	("Boolean indicating if the configuration file can be written.") ]
+   boolean Writeable;
+};
+
+
+// Linux_NFSv3SettingContext association
+
+[Association,
+ Aggregation,
+ Composition,
+ Description (
+	"Associates a Linux system configuration instance with its Linux system settings."),
+ Provider ("cmpi:Linux_NFSv3SettingContext") ]
+class Linux_NFSv3SettingContext : CIM_SystemSettingContext
+{
+    [Override ("Context"), Aggregate, Max (1),
+     Description
+	("The Linux system configuration to which the Linux system setting belongs.") ]
+    Linux_NFSv3SystemConfiguration REF Context;
+
+    [Override ("Setting"),
+     Description
+	("The Linux system setting.") ]
+    Linux_NFSv3SystemSetting REF Setting;
+};
+

@@ -1,0 +1,45 @@
+********************************************************************************
+association : Linux_NFSv3SettingContext
+objectPath : Linux_NFSv3SettingContext.Context="Linux_NFSv3SystemConfiguration.SystemName=HOSTNAME,SystemCreationClassName=Linux_ComputerSystem,CreationClassName=Linux_NFSv3SystemConfiguration,Name=NFSv3",Setting="Linux_NFSv3SystemSetting.SystemName=HOSTNAME,SystemCreationClassName=Linux_ComputerSystem,CreationClassName=Linux_NFSv3SystemSetting,SettingID=REMOTEHOST:/PATHNAME"
+sourceRole : Context
+targetRole : Setting
+sourceClass : Linux_NFSv3SystemConfiguration
+targetClass : Linux_NFSv3SystemSetting
+
+--------------------------------------------------------------------------------
+Instance                                                       enumInstanceNames
+
+--------------------------------------------------------------------------------
+Instance                                                           enumInstances
+
+--------------------------------------------------------------------------------
+Instance                                                                     get
+
+--------------------------------------------------------------------------------
+Instance                                                                     set
+Expected Exception : NOT_SUPPORTED
+
+--------------------------------------------------------------------------------
+Instance                                                                  create
+Expected Exception : NOT_SUPPORTED
+
+--------------------------------------------------------------------------------
+Instance                                                                  delete
+Expected Exception : NOT_SUPPORTED
+
+--------------------------------------------------------------------------------
+Instance                                                               execQuery
+Expected Exception : NOT_SUPPORTED
+
+--------------------------------------------------------------------------------
+Association                                                      associatorNames
+
+--------------------------------------------------------------------------------
+Association                                                          associators
+
+--------------------------------------------------------------------------------
+Association                                                       referenceNames
+
+--------------------------------------------------------------------------------
+Association                                                           references
+

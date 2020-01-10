@@ -1,0 +1,54 @@
+<INSTANCE CLASSNAME="Linux_NFSv3ConfigFile">
+ <PROPERTY NAME="Directory" TYPE="string"> <VALUE>/</VALUE> </PROPERTY>
+ <PROPERTY NAME="Permission" TYPE="string"> <VALUE>rw</VALUE> </PROPERTY>
+ <PROPERTY NAME="RemoteHost" TYPE="string"> <VALUE>master</VALUE> </PROPERTY>
+ <PROPERTY NAME="EntryName" TYPE="string"> <VALUE>master:/</VALUE> </PROPERTY>
+</INSTANCE>
+
+<INSTANCE CLASSNAME="Linux_NFSv3ConfigFile">
+ <PROPERTY NAME="Directory" TYPE="string"> <VALUE>/</VALUE> </PROPERTY>
+ <PROPERTY NAME="Permission" TYPE="string"> <VALUE>rw</VALUE> </PROPERTY>
+ <PROPERTY NAME="Squash" TYPE="string"> <VALUE>no_root_squash</VALUE> </PROPERTY>
+ <PROPERTY NAME="RemoteHost" TYPE="string"> <VALUE>trusty</VALUE> </PROPERTY>
+ <PROPERTY NAME="EntryName" TYPE="string"> <VALUE>trusty:/</VALUE> </PROPERTY>
+</INSTANCE>
+
+<INSTANCE CLASSNAME="Linux_NFSv3ConfigFile">
+ <PROPERTY NAME="Directory" TYPE="string"> <VALUE>/projects</VALUE> </PROPERTY>
+ <PROPERTY NAME="Permission" TYPE="string"> <VALUE>rw</VALUE> </PROPERTY>
+ <PROPERTY NAME="RemoteHost" TYPE="string"> <VALUE>proj*.local.domain</VALUE> </PROPERTY>
+ <PROPERTY NAME="EntryName" TYPE="string"> <VALUE>proj*.local.domain:/projects</VALUE> </PROPERTY>
+</INSTANCE>
+
+<INSTANCE CLASSNAME="Linux_NFSv3ConfigFile">
+ <PROPERTY NAME="Directory" TYPE="string"> <VALUE>/usr</VALUE> </PROPERTY>
+ <PROPERTY NAME="Permission" TYPE="string"> <VALUE>ro</VALUE> </PROPERTY>
+ <PROPERTY NAME="RemoteHost" TYPE="string"> <VALUE>*.local.domain</VALUE> </PROPERTY>
+ <PROPERTY NAME="EntryName" TYPE="string"> <VALUE>*.local.domain:/usr</VALUE> </PROPERTY>
+</INSTANCE>
+
+<INSTANCE CLASSNAME="Linux_NFSv3ConfigFile">
+ <PROPERTY NAME="Directory" TYPE="string"> <VALUE>/usr</VALUE> </PROPERTY>
+ <PROPERTY NAME="Permission" TYPE="string"> <VALUE>rw</VALUE> </PROPERTY>
+ <PROPERTY NAME="RemoteHost" TYPE="string"> <VALUE>@trusted</VALUE> </PROPERTY>
+ <PROPERTY NAME="EntryName" TYPE="string"> <VALUE>@trusted:/usr</VALUE> </PROPERTY>
+</INSTANCE>
+
+<INSTANCE CLASSNAME="Linux_NFSv3ConfigFile">
+ <PROPERTY NAME="Directory" TYPE="string"> <VALUE>/home/joe</VALUE> </PROPERTY>
+ <PROPERTY NAME="Permission" TYPE="string"> <VALUE>rw</VALUE> </PROPERTY>
+ <PROPERTY NAME="Squash" TYPE="string"> <VALUE>all_squash</VALUE> </PROPERTY>
+ <PROPERTY NAME="AnonUID" TYPE="uint16"> <VALUE>150</VALUE> </PROPERTY>
+ <PROPERTY NAME="AnonGID" TYPE="uint16"> <VALUE>100</VALUE> </PROPERTY>
+ <PROPERTY NAME="RemoteHost" TYPE="string"> <VALUE>pc001</VALUE> </PROPERTY>
+ <PROPERTY NAME="EntryName" TYPE="string"> <VALUE>pc001:/home/joe</VALUE> </PROPERTY>
+</INSTANCE>
+
+<INSTANCE CLASSNAME="Linux_NFSv3ConfigFile">
+ <PROPERTY NAME="Directory" TYPE="string"> <VALUE>/pub</VALUE> </PROPERTY>
+ <PROPERTY NAME="Permission" TYPE="string"> <VALUE>ro</VALUE> </PROPERTY>
+ <PROPERTY NAME="Secure" TYPE="boolean"> <VALUE>false</VALUE> </PROPERTY>
+ <PROPERTY NAME="Squash" TYPE="string"> <VALUE>all_squash</VALUE> </PROPERTY>
+ <PROPERTY NAME="EntryName" TYPE="string"> <VALUE>:/pub</VALUE> </PROPERTY>
+</INSTANCE>
+

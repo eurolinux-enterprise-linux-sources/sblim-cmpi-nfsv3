@@ -1,0 +1,21 @@
+Changes in 1.1.0
+================
+
+Bugs:
+- 1652246 Fixed compile errors with gcc4
+- 1457924 Fixed Various Compile Warnings
+- 2795176 Fixed migrate provider licenses to EPL
+
+Changes in 1.0.14
+=================
+
+Bugs:
+- 1199129 Providers won't compile with CMPI 1.0
+- 1600348 Fixed association behaviour if /etc/exports
+	  file is empty
+
+Changes in 1.0.13
+=================
+
+Bugs:
+- 1183805 Autoconfiscate all provider packages

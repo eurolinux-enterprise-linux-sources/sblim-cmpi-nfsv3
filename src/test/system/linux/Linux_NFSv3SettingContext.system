@@ -1,0 +1,7 @@
+********************************************************************************
+association : Linux_NFSv3SettingContext
+
+--------------------------------------------------------------------------------
+Linux_NFSv3SystemConfiguration : -target Linux_NFSv3SystemSetting -eq -cmd egrep -v "^\#.*" /etc/exports | awk '{i++} END {if(i>0)i--;print i-0}' RS='('
+Linux_NFSv3SystemSetting : -target Linux_NFSv3SystemConfiguration -eq 1
+

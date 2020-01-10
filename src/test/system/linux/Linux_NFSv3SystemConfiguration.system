@@ -1,0 +1,12 @@
+********************************************************************************
+class : Linux_NFSv3SystemConfiguration
+--------------------------------------------------------------------------------
+Linux_NFSv3SystemConfiguration : -eq 1
+--------------------------------------------------------------------------------
+SystemCreationClassName : -eq Linux_ComputerSystem
+SystemName : -eq -cmd hostname -f
+CreationClassName : -eq Linux_NFSv3SystemConfiguration
+Name : -eq NFSv3
+Filename : -eq /etc/exports
+Readable : -eq -cmd if [[ `stat -c "%A" /etc/exports` = ?r* ]]; then echo TRUE; else echo FALSE; fi
+Writeable : -eq -cmd if [[ `stat -c "%A" /etc/exports` = ??w* ]]; then echo TRUE; else echo FALSE; fi

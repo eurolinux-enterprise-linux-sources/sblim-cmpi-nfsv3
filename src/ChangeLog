@@ -1,0 +1,489 @@
+2009-05-22  Tyrel Datwyler <tyreld@us.ibm.com>
+
+	* Linux_NFSv3SystemConfiguration.c, Linux_NFSv3SystemSetting.c,
+	Makefile.am, mof/Linux_NFSv3SystemConfiguration.mof,
+	mof/Linux_NFSv3SystemSetting.mof,
+	util/Linux_NFSv3SystemConfigurationUtil.c,
+	util/Linux_SystemConfigurationUtil.h:
+
+	Fixed 2795176: migrate provider licenses to EPL
+
+2009-05-22  Tyrel Datwyler <tyreld@us.ibm.com>
+
+	* COPYING, Linux_NFSv3SystemConfiguration.c,
+	Linux_NFSv3SystemSetting.c, Makefile.am, NEWS, acinclude.m4,
+	autoconfiscate.sh, provider-register.sh, sblim-cmpi-nfsv3.rh.spec,
+	sblim-cmpi-nfsv3.spec.in, mof/Linux_NFSv3SystemConfiguration.mof,
+	mof/Linux_NFSv3SystemSetting.mof,
+	util/Linux_NFSv3SystemConfigurationUtil.c,
+	util/Linux_SystemConfigurationUtil.h:
+
+	Fixed 2795176: migrate provider licenses to EPL
+
+2007-11-19  Chris Buccella <buccella@vnet.linux.ibm.com>
+
+	* Linux_NFSv3SystemConfiguration.c, Linux_NFSv3SystemSetting.c,
+	mof/Linux_NFSv3SystemConfiguration.mof,
+	mof/Linux_NFSv3SystemSetting.mof,
+	util/Linux_NFSv3SystemConfigurationUtil.c,
+	util/Linux_SystemConfigurationUtil.h:
+
+	updated URL for CPL (1833455)
+
+2007-07-23  Tyrel Datwyler <tyreld@us.ibm.com>
+
+	* util/parser/parser.y, util/xmlparser/setProperty.c, ChangeLog,
+	NEWS:
+
+	[ 1457924 ] Various Compile Warnings
+
+2007-02-05  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* ChangeLog, NEWS, util/parser/lexer.l, util/parser/parser.y,
+	util/xmlparser/xmllexer.l:
+
+	[1652246] fixes compile errors with gcc4
+
+2006-12-11  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* ChangeLog, NEWS:
+
+	updated release notes
+
+2006-11-21  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* Linux_NFSv3SettingContext.c:
+
+	bug #1600348: fixed association behaviour if /etc/exports file is
+	empty
+
+2006-03-10  lynnmoss
+
+	* Linux_NFSv3SettingContext.c, Linux_NFSv3SystemConfiguration.c,
+	Linux_NFSv3SystemSetting.c, NEWS, configure.ac,
+	sblim-cmpi-nfsv3.rh.spec,
+	util/Linux_NFSv3SystemConfigurationUtil.c,
+	util/Linux_SystemConfigurationUtil.h,
+	util/instance2string/instance2string.c, ChangeLog:
+
+	bug# 1199129 - Providers won't compile with CMPI 1.0
+
+2006-01-18  lynnmoss
+
+	* ChangeLog:
+
+	bug# 1183805: Autoconfiscate all Provider Packages
+
+2006-01-18  lynnmoss
+
+	* AUTHORS, COPYING, DEBUG, INSTALL, Linux_NFSv3SettingContext.c,
+	Linux_NFSv3SystemConfiguration.c, Linux_NFSv3SystemSetting.c,
+	Makefile.am, NEWS, README, README.TEST, README.tog-pegasus,
+	acinclude.m4, autoconfiscate.sh, configure.ac, license.html,
+	makefile, provider-register.sh, rules, sblim-cmpi-nfsv3.rh.spec,
+	sblim-cmpi-nfsv3.spec.in, setting.cmpi,
+	mof/Linux_NFSv3SystemConfiguration.registration,
+	mof/Linux_NFSv3SystemConfigurationRegister.mof,
+	mof/Linux_NFSv3SystemSetting.registration,
+	mof/Linux_NFSv3SystemSettingRegister.mof, mof/README, mof/makefile,
+	test/README, test/makefile, util/makefile,
+	util/instance2string/makefile, util/parser/README,
+	util/parser/lexer.l, util/parser/makefile, util/parser/parser.l,
+	util/xmlparser/README, util/xmlparser/makefile,
+	util/xmlparser/parser.l, util/xmlparser/parser.y,
+	util/xmlparser/xmllexer.l, util/xmlparser/xmlparser.y:
+
+	bug# 1183805: Autoconfiscate all Provider Packages
+
+2004-05-28  Gareth Bestor <bestor@us.ibm.com>
+
+	* util/parser/: parser.l, samples/exports:
+
+	fix for https://bugzilla.linux.ibm.com/show_bug.cgi?id=9019
+
+2004-05-24  Gareth Bestor <bestor@us.ibm.com>
+
+	* util/: Linux_NFSv3SystemConfigurationUtil.c,
+	Linux_SystemConfigurationUtil.h, makefile,
+	instance2string/instance2string.c, parser/makefile,
+	parser/parser.l, parser/parser.y, xmlparser/makefile,
+	xmlparser/parser.y, xmlparser/setProperty.c:
+
+	fixes for https://bugzilla.linux.ibm.com/show_bug.cgi?id=8772
+
+2004-05-23  Gareth Bestor <bestor@us.ibm.com>
+
+	* Linux_NFSv3SettingContext.c, Linux_NFSv3SystemConfiguration.c,
+	Linux_NFSv3SystemSetting.c,
+	util/Linux_NFSv3SystemConfigurationUtil.c,
+	util/Linux_SystemConfigurationUtil.h:
+
+	fixes for https://bugzilla.linux.ibm.com/show_bug.cgi?id=8772
+
+2004-05-14  Gareth Bestor <bestor@us.ibm.com>
+
+	* Linux_NFSv3SystemSetting.c, test/exports.nfsv3,
+	test/system/linux/Linux_NFSv3SettingContext.system,
+	test/system/linux/Linux_NFSv3SystemSetting.system,
+	util/parser/parser.y:
+
+	- Added extra test instance example to the example exports/nfsv3
+	file - Applied fixes for
+	https://bugzilla.linux.ibm.com/show_bug.cgi?id=8328 - Fixed test
+	scripts so that they correctly report 0 instances when	 exports
+	file is empty (in support for 8328 bug)
+
+2004-05-13  Gareth Bestor <bestor@us.ibm.com>
+
+	* mof/Linux_NFSv3SystemConfiguration.mof:
+
+	fix for https://bugzilla.linux.ibm.com/show_bug.cgi?id=8096
+
+2004-05-12  Gareth Bestor <bestor@us.ibm.com>
+
+	* mof/Linux_NFSv3SystemConfiguration.mof:
+
+	fix for https://bugzilla.linux.ibm.com/show_bug.cgi?id=8096
+
+2004-05-07  Gareth Bestor <bestor@us.ibm.com>
+
+	* Linux_NFSv3SettingContext.c:
+
+	fix for https://bugzilla.linux.ibm.com/show_bug.cgi?id=8094
+
+2004-05-07  Gareth Bestor <bestor@us.ibm.com>
+
+	* test/sblim-cmpi-nfsv3-test.sh:
+
+	fix to automatically set HOSTNAME in test scripts
+
+2004-05-03  Gareth Bestor <bestor@us.ibm.com>
+
+	* test/system/linux/: Linux_NFSv3SystemConfiguration.system,
+	Linux_NFSv3SystemSetting.system:
+
+	fixed test scripts checking for read/write permission on config
+	file
+
+2004-05-02  Gareth Bestor <bestor@us.ibm.com>
+
+	* test/sblim-cmpi-nfsv3-test.sh:
+
+	[no log message]
+
+2004-05-02  Gareth Bestor <bestor@us.ibm.com>
+
+	* test/sblim-cmpi-nfsv3-test.sh:
+
+	[no log message]
+
+2004-05-02  Gareth Bestor <bestor@us.ibm.com>
+
+	* test/cim/Linux_NFSv3SystemSetting.cim:
+
+	added createinstance() existing instance test, which should always
+	fail added deleteinstance() non-existing instance test, which
+	should always fail added message to test run script to manually
+	edit hostname
+
+2004-04-30  Gareth Bestor <bestor@us.ibm.com>
+
+	* Linux_NFSv3SystemSetting.c:
+
+	Fix for LTC Bugzilla 8008
+
+2004-04-28  Gareth Bestor <bestor@us.ibm.com>
+
+	* test/sblim-cmpi-nfsv3-test.sh:
+
+	[no log message]
+
+2004-04-28  Gareth Bestor <bestor@us.ibm.com>
+
+	* test/makefile:
+
+	fix makefile to install exports.nfsv3
+
+2004-04-27  Gareth Bestor <bestor@us.ibm.com>
+
+	* util/makefile:
+
+	[no log message]
+
+2004-04-27  Gareth Bestor <bestor@us.ibm.com>
+
+	* test/exports, test/exports.nfsv3, util/makefile:
+
+	fix makefile to install utility libs to COMMONLIB. Rename
+	test/exports to test/exports.nfsv3
+
+2004-04-21  Gareth Bestor <bestor@us.ibm.com>
+
+	* util/instance2string/instance2string.c:
+
+	added check for null strings to instance2string.c
+
+2004-04-20  Gareth Bestor <bestor@us.ibm.com>
+
+	* mof/: Linux_NFSv3SystemConfiguration.mof,
+	Linux_NFSv3SystemConfigurationRegister.mof:
+
+	added instance provider type in
+	NFSv3SystemConfigurationRegister.mof
+
+2004-04-02  Gareth Bestor <bestor@us.ibm.com>
+
+	* README:
+
+	updated README with overview
+
+2004-04-01  Gareth Bestor <bestor@us.ibm.com>
+
+	* test/sblim-cmpi-nfsv3-test.sh:
+
+	[no log message]
+
+2004-04-01  Gareth Bestor <bestor@us.ibm.com>
+
+	* test/: exports, makefile:
+
+	[no log message]
+
+2004-04-01  Gareth Bestor <bestor@us.ibm.com>
+
+	* test/exports:
+
+	[no log message]
+
+2004-04-01  Gareth Bestor <bestor@us.ibm.com>
+
+	* test/: exports, makefile, sblim-cmpi-nfsv3-test.sh:
+
+	updated test files
+
+2004-04-01  Gareth Bestor <bestor@us.ibm.com>
+
+	* setting.cmpi, util/parser/parser.l, util/xmlparser/parser.l:
+
+	Fixed yylineno not defined for Redhat
+
+2004-03-30  Gareth Bestor <bestor@us.ibm.com>
+
+	* mof/makefile:
+
+	[no log message]
+
+2004-03-30  Gareth Bestor <bestor@us.ibm.com>
+
+	* makefile, util/parser/parser.l, util/xmlparser/parser.l:
+
+	[no log message]
+
+2004-03-30  Gareth Bestor <bestor@us.ibm.com>
+
+	* util/: parser/makefile, xmlparser/makefile:
+
+	[no log message]
+
+2004-03-30  Gareth Bestor <bestor@us.ibm.com>
+
+	* makefile, util/makefile, util/instance2string/makefile,
+	util/parser/makefile, util/xmlparser/makefile:
+
+	[no log message]
+
+2004-03-30  Gareth Bestor <bestor@us.ibm.com>
+
+	* test/system/linux/createKeyFiles.sh:
+
+	[no log message]
+
+2004-03-30  Gareth Bestor <bestor@us.ibm.com>
+
+	* configure, env, setting.cmpi:
+
+	[no log message]
+
+2004-03-28  Gareth Bestor <bestor@us.ibm.com>
+
+	* Linux_NFSv3SettingContext.c, Linux_NFSv3SystemConfiguration.c,
+	Linux_NFSv3SystemSetting.c:
+
+	[no log message]
+
+2004-03-28  Gareth Bestor <bestor@us.ibm.com>
+
+	* INSTALL, makefile, mof/Linux_NFSv3SystemConfiguration.mof,
+	mof/makefile, test/README:
+
+	[no log message]
+
+2004-03-27  Gareth Bestor <bestor@us.ibm.com>
+
+	* mof/: Linux_NFSv3SystemConfiguration.mof,
+	Linux_NFSv3SystemSetting.mof, makefile:
+
+	[no log message]
+
+2004-03-27  Gareth Bestor <bestor@us.ibm.com>
+
+	* INSTALL, mof/Linux_NFSv3SystemConfiguration.mof:
+
+	[no log message]
+
+2004-03-27  Gareth Bestor <bestor@us.ibm.com>
+
+	* mof/: Linux_NFSv3SystemConfiguration.mof,
+	Linux_NFSv3SystemSetting.mof:
+
+	[no log message]
+
+2004-03-27  Gareth Bestor <bestor@us.ibm.com>
+
+	* makefile, mof/makefile, test/makefile, util/makefile,
+	util/instance2string/makefile:
+
+	[no log message]
+
+2004-03-27  Gareth Bestor <bestor@us.ibm.com>
+
+	* mof/: Linux_NFSv3SystemConfiguration.mof,
+	Linux_NFSv3SystemSetting.mof:
+
+	[no log message]
+
+2004-03-27  Gareth Bestor <bestor@us.ibm.com>
+
+	* setting.cmpi, makefile, util/makefile,
+	util/instance2string/makefile:
+
+	[no log message]
+
+2004-03-27  Gareth Bestor <bestor@us.ibm.com>
+
+	* test/: README, makefile, sblim-cmpi-nfsv3-test.sh:
+
+	[no log message]
+
+2004-03-26  Gareth Bestor <bestor@us.ibm.com>
+
+	* setting.cmpi:
+
+	Initial revision
+
+2004-03-26  Gareth Bestor <bestor@us.ibm.com>
+
+	* INSTALL, Linux_NFSv3SettingContext.c,
+	Linux_NFSv3SystemConfiguration.c, Linux_NFSv3SystemSetting.c,
+	README, setting.cmpi, makefile, mof/makefile, test/README,
+	test/makefile, test/sblim-cmpi-nfsv3-test.sh,
+	test/cim/Linux_NFSv3SettingContext.cim,
+	test/cim/Linux_NFSv3SystemConfiguration.cim,
+	test/cim/Linux_NFSv3SystemSetting.cim, util/makefile,
+	util/instance2string/instance2string.c,
+	util/instance2string/makefile, util/parser/makefile,
+	util/parser/parser.l, util/parser/parser.y,
+	util/xmlparser/makefile:
+
+	[no log message]
+
+2004-03-24  Gareth Bestor <bestor@us.ibm.com>
+
+	* INSTALL, Linux_NFSv3SettingContext.c,
+	Linux_NFSv3SystemConfiguration.c, Linux_NFSv3SystemSetting.c,
+	test/README, test/makefile, test/sblim-cmpi-nfsv3-test.sh,
+	test/cim/Linux_NFSv3SettingContext.cim,
+	test/cim/Linux_NFSv3SystemConfiguration.cim,
+	test/cim/Linux_NFSv3SystemSetting.cim,
+	util/instance2string/instance2string.c, util/parser/parser.l,
+	util/parser/parser.y:
+
+	[no log message]
+
+2004-03-08  Gareth Bestor <bestor@us.ibm.com>
+
+	* test/system/linux/createKeyFiles.sh:
+
+	Initial revision
+
+2004-03-08  Gareth Bestor <bestor@us.ibm.com>
+
+	* test/: makefile, system/linux/createKeyFiles.sh:
+
+	[no log message]
+
+2004-03-08  Gareth Bestor <bestor@us.ibm.com>
+
+	* INSTALL, Linux_NFSv3SettingContext.c,
+	Linux_NFSv3SystemConfiguration.c, Linux_NFSv3SystemSetting.c,
+	test/README, test/makefile, test/sblim-cmpi-nfsv3-test.sh,
+	test/cim/Linux_NFSv3SettingContext.cim,
+	test/cim/Linux_NFSv3SystemConfiguration.cim,
+	test/cim/Linux_NFSv3SystemSetting.cim,
+	util/instance2string/instance2string.c, util/parser/parser.l,
+	util/parser/parser.y:
+
+	[no log message]
+
+2004-02-24  Gareth Bestor <bestor@us.ibm.com>
+
+	* GLOBALS.h, INSTALL, configure, env, Linux_NFSv3SystemSetting.c,
+	license.html, makefile, Linux_NFSv3SettingContext.c,
+	Linux_NFSv3SystemConfiguration.c, README, rules, util/makefile,
+	util/Linux_SystemConfigurationUtil.h, util/README,
+	util/Linux_NFSv3SystemConfigurationUtil.c,
+	util/instance2string/README,
+	util/instance2string/instance2string.c,
+	util/instance2string/makefile, util/parser/README,
+	util/parser/makefile, util/parser/parser.l, util/parser/parser.y,
+	util/parser/samples/exports, util/xmlparser/makefile,
+	util/xmlparser/parser.l, util/xmlparser/README,
+	util/xmlparser/parser.y, util/xmlparser/setProperty.c,
+	util/xmlparser/samples/exports.xml,
+	mof/Linux_NFSv3SystemSetting.mof,
+	mof/Linux_NFSv3SystemSettingRegister.mof,
+	util/xmlparser/samples/xinetd.xml,
+	mof/Linux_NFSv3SystemConfiguration.mof,
+	mof/Linux_NFSv3SystemConfigurationRegister.mof, mof/README,
+	mof/makefile, test/README, test/makefile,
+	test/sblim-cmpi-nfsv3-test.sh,
+	test/cim/Linux_NFSv3SettingContext.cim,
+	test/cim/Linux_NFSv3SystemConfiguration.cim,
+	test/cim/Linux_NFSv3SystemSetting.cim,
+	test/system/linux/Linux_NFSv3SettingContext.system,
+	test/system/linux/Linux_NFSv3SystemConfiguration.system,
+	test/system/linux/Linux_NFSv3SystemSetting.system:
+
+	Initial revision
+
+2004-02-24  Gareth Bestor <bestor@us.ibm.com>
+
+	* GLOBALS.h, INSTALL, configure, env, Linux_NFSv3SystemSetting.c,
+	license.html, makefile, Linux_NFSv3SettingContext.c,
+	Linux_NFSv3SystemConfiguration.c, README, rules, util/makefile,
+	util/Linux_SystemConfigurationUtil.h, util/README,
+	util/Linux_NFSv3SystemConfigurationUtil.c,
+	util/instance2string/README,
+	util/instance2string/instance2string.c,
+	util/instance2string/makefile, util/parser/README,
+	util/parser/makefile, util/parser/parser.l, util/parser/parser.y,
+	util/parser/samples/exports, util/xmlparser/makefile,
+	util/xmlparser/parser.l, util/xmlparser/README,
+	util/xmlparser/parser.y, util/xmlparser/setProperty.c,
+	util/xmlparser/samples/exports.xml,
+	mof/Linux_NFSv3SystemSetting.mof,
+	mof/Linux_NFSv3SystemSettingRegister.mof,
+	util/xmlparser/samples/xinetd.xml,
+	mof/Linux_NFSv3SystemConfiguration.mof,
+	mof/Linux_NFSv3SystemConfigurationRegister.mof, mof/README,
+	mof/makefile, test/README, test/makefile,
+	test/sblim-cmpi-nfsv3-test.sh,
+	test/cim/Linux_NFSv3SettingContext.cim,
+	test/cim/Linux_NFSv3SystemConfiguration.cim,
+	test/cim/Linux_NFSv3SystemSetting.cim,
+	test/system/linux/Linux_NFSv3SettingContext.system,
+	test/system/linux/Linux_NFSv3SystemConfiguration.system,
+	test/system/linux/Linux_NFSv3SystemSetting.system:
+
+	[no log message]
+
