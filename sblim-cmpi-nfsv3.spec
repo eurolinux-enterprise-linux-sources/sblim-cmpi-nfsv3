@@ -3,7 +3,7 @@
 
 Summary:        SBLIM nfsv3 instrumentation
 Name:           sblim-cmpi-nfsv3
-Version:        1.1.0
+Version:        1.1.1
 Release:        1%{?dist}
 License:        EPL
 Group:          Applications/System
@@ -112,6 +112,10 @@ fi
 rm -rf $RPM_BUILD_ROOT
 
 %changelog
+* Mon Jul 18 2011 Vitezslav Crhonek <vcrhonek@redhat.com> - 1.1.1-1
+- Update to sblim-cmpi-nfsv3-1.1.1
+  Resolves: #694508
+
 * Wed Jun 30 2010 Vitezslav Crhonek <vcrhonek@redhat.com> - 1.1.0-1
 - Update to sblim-cmpi-nfsv3-1.1.0
 

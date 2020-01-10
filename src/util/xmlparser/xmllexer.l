@@ -6,9 +6,9 @@
 %{
 #include <string.h>
 #include "xmlparser.h"
-#ifndef YY_FLEX_LEX_COMPAT
+/* #ifndef YY_FLEX_LEX_COMPAT
 int yylineno = 1;
-#endif
+#endif */
 %}
 
 		/* Some useful regular expressions to use in the RULES section */

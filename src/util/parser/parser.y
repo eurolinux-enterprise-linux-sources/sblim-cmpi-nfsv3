@@ -62,6 +62,9 @@ static void setvalue (void * value);
 %token <boolean> SUBTREECHECK
 %token <boolean> SECURELOCKS
 %token <uint16> NUMBER
+%token <boolean> CROSSMNT
+%token <string> ALLSQUASH
+%token <boolean> ACL
 
 /* DEFINE PARSER RULE TYPES HERE */
 
@@ -149,6 +152,9 @@ attribute:	PERMISSION		{ startproperty("Permission",CMPI_string); setvalue($1); 
         |       SECURELOCKS		{ startproperty("SecureLocks",CMPI_boolean); setvalue(&$1); endproperty(); }
         |       ANONGID '=' NUMBER	{ startproperty("AnonGID",CMPI_uint16); setvalue(&$3); endproperty(); }
         |       ANONUID '=' NUMBER	{ startproperty("AnonUID",CMPI_uint16); setvalue(&$3); endproperty(); }
+        |       CROSSMNT		{ startproperty("Crossmnt",CMPI_boolean); setvalue(&$1); endproperty(); }
+        |       ALLSQUASH		{ startproperty("AllSquash",CMPI_string); setvalue($1); endproperty(); free($1); }
+        |       ACL		{ startproperty("Acl",CMPI_boolean); setvalue(&$1); endproperty(); }
         ;
 
 /* END OF RULES SECTION */

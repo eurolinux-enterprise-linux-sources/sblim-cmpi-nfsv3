@@ -1,3 +1,53 @@
+2011-05-17  Tyrel Datwyler <tyreld@us.ibm.com>
+
+	* NEWS, configure.ac:
+
+	Fixed 3303687: remove old cmpi version definition
+
+2011-05-11  Narasimmha Sharoff <nsharoff@us.ibm.com>
+
+	* configure.ac:
+
+	[3299507] obtain full hostname using etab entry
+
+2011-05-11  Narasimmha Sharoff <nsharoff@us.ibm.com>
+
+	* ChangeLog, NEWS:
+
+	[3299507] obtain full hostname using etab entry
+
+2011-05-11  Narasimmha Sharoff <nsharoff@us.ibm.com>
+
+	* util/Linux_NFSv3SystemConfigurationUtil.c,
+	mof/Linux_NFSv3SystemSetting.mof:
+
+	[3299507] obtain full hostname using etab entry
+
+2011-05-11  Narasimmha Sharoff <nsharoff@us.ibm.com>
+
+	* util/parser/lexer.l, util/parser/parser.y,
+	util/xmlparser/xmllexer.l, GLOBALS.h:
+
+	[3299507] obtain full hostname using etab entry
+
+2011-04-04  Tyrel Datwyler <tyreld@us.ibm.com>
+
+	* NEWS, test/sblim-cmpi-nfsv3-test.sh:
+
+	Fixed 3275169: bash error reported in provider bootstrap scripts
+
+2011-04-04  Tyrel Datwyler <tyreld@us.ibm.com>
+
+	* .cvsignore:
+
+	generated files to be ignored by CVS
+
+2009-06-02  Tyrel Datwyler <tyreld@us.ibm.com>
+
+	* ChangeLog, NEWS, configure.ac:
+
+	Updated for 1.1.0 release
+
 2009-05-22  Tyrel Datwyler <tyreld@us.ibm.com>
 
 	* Linux_NFSv3SystemConfiguration.c, Linux_NFSv3SystemSetting.c,
@@ -57,7 +107,7 @@
 	bug #1600348: fixed association behaviour if /etc/exports file is
 	empty
 
-2006-03-10  lynnmoss
+2006-03-10  Lynn Moss <lynn@us.ibm.com>
 
 	* Linux_NFSv3SettingContext.c, Linux_NFSv3SystemConfiguration.c,
 	Linux_NFSv3SystemSetting.c, NEWS, configure.ac,
@@ -68,13 +118,13 @@
 
 	bug# 1199129 - Providers won't compile with CMPI 1.0
 
-2006-01-18  lynnmoss
+2006-01-18  Lynn Moss <lynn@us.ibm.com>
 
 	* ChangeLog:
 
 	bug# 1183805: Autoconfiscate all Provider Packages
 
-2006-01-18  lynnmoss
+2006-01-18  Lynn Moss <lynn@us.ibm.com>
 
 	* AUTHORS, COPYING, DEBUG, INSTALL, Linux_NFSv3SettingContext.c,
 	Linux_NFSv3SystemConfiguration.c, Linux_NFSv3SystemSetting.c,

@@ -1,3 +1,12 @@
+Changes in 1.1.1
+================
+Features:
+- 3299507 obtain fully qualified hostname using etab entry
+
+Bugs:
+- 3275169 bash error reported in provider bootstrap scripts
+- 3303687 remove old cmpi version definition
+
 Changes in 1.1.0
 ================
 

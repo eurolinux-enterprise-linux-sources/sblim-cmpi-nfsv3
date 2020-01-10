@@ -27,6 +27,7 @@
 #include <string.h>
 #include <errno.h>
 #include <unistd.h>
+#include <sys/types.h>
 #include <sys/stat.h>
 
 /* Required CMPI library headers */
@@ -53,6 +54,9 @@ typedef struct {
    char name[_MAXNAMELENGTH];
    FILE * handle;
 } _FILEINFO;
+
+/* Information on config file used; used for Filename property */
+static int cfg_used = USE_ETAB_CFG;
 
 
 /* ---------------------------------------------------------------------------
@@ -419,6 +423,18 @@ int Linux_NFSv3_sameObject( const CMPIObjectPath * object1, const CMPIObjectPath
    return 1;
 }
 
+/* Check if the file exists and length > 0 */
+static int 
+valid_file(char *filename) 
+{
+	struct stat sbuf;
+
+	if (stat(filename, &sbuf) != 0) return -1;
+	if (sbuf.st_size <= 0) return -1;
+
+	return 0;
+}
+
 /* ----------------------------------------------------------------------------------- */
 
 /*
@@ -429,11 +445,17 @@ void * Linux_NFSv3_startReadingInstances()
    FILE * sourcefile;			/* Handle for the original config file */
    _FILEINFO * xmlfileinfo;		/* Filename and handle for the translated XML config file */ 
 
-   /* Read from the original config file */
-   if ((sourcefile = fopen(_CONFIGFILE,"r")) == NULL) {
-      _OSBASE_TRACE(1,("startReadingInstances() : Cannot read from config file %s", _CONFIGFILE));
-      return NULL;
+    /* If etab file doesn't exist or is zero bytes, use exports */
+    if ( ((sourcefile = fopen(_CONFIGFILE_ETAB, "r")) == NULL) || 
+	 (valid_file(_CONFIGFILE_ETAB) == -1)  ) {
+           _OSBASE_TRACE(4,("startReadingInstances() : %s not found or contains no entries.  Using /etc/exports", _CONFIGFILE_ETAB));
+           if ((sourcefile = fopen(_CONFIGFILE,"r")) == NULL) {
+              _OSBASE_TRACE(1,("startReadingInstances() : Cannot read from config file %s", _CONFIGFILE));
+           return NULL;
+          }
+	  else cfg_used = USE_EXPORTS_CFG;
    }
+
 
    /* Write a new temp file containing the translated XML config file */
    xmlfileinfo = malloc(sizeof(_FILEINFO));
@@ -505,7 +527,10 @@ int Linux_NFSv3_readNextInstance( void * instances, const CMPIInstance ** instan
    CMSetProperty(*instance, "SystemCreationClassName", CSCreationClassName, CMPI_chars);
    CMSetProperty(*instance, "CreationClassName", _SETTINGCLASSNAME, CMPI_chars);
    /* Note - the SettingID key property is set by each config file instance */ 
+   if (cfg_used == USE_EXPORTS_CFG)
    CMSetProperty(*instance, "Filename", _CONFIGFILE, CMPI_chars);
+   else 
+   CMSetProperty(*instance, "Filename", _CONFIGFILE_ETAB, CMPI_chars);
 
    /* stat() the config file to set the Readable and Writeable properties */
    if (stat(_CONFIGFILE, &fileinfo) == 0) {
@@ -646,7 +671,11 @@ CMPIInstance * Linux_NFSv3_makeConfigInstance( const CMPIBroker * broker, const 
    CMSetProperty(instance, "Name", _CONFIGNAME, CMPI_chars);
 
    /* stat() the config file to set the Readable and Writeable properties */
+   if (cfg_used == USE_EXPORTS_CFG)
    CMSetProperty(instance, "Filename", _CONFIGFILE, CMPI_chars);
+   else 
+   CMSetProperty(instance, "Filename", _CONFIGFILE_ETAB, CMPI_chars);
+
    if (stat(_CONFIGFILE, &fileinfo) == 0) {
       value.boolean = ((fileinfo.st_mode & S_IRUSR) != 0);
       CMSetProperty(instance, "Readable", &value, CMPI_boolean);

@@ -2,7 +2,7 @@
 # Process this file with autoconf to produce a configure script.
 
 AC_PREREQ(2.59)
-AC_INIT(SBLIM BaseOS NFS V3 Providers, 1.1.0, sblim-devel@lists.sourceforge.net,sblim-cmpi-nfsv3)
+AC_INIT(SBLIM BaseOS NFS V3 Providers, 1.1.1, sblim-devel@lists.sourceforge.net,sblim-cmpi-nfsv3)
 AC_CONFIG_SRCDIR([GLOBALS.h])
 AC_CONFIG_HEADER([config.h])
 AM_INIT_AUTOMAKE
@@ -77,7 +77,7 @@ fi
 # Extend CPPFLAGS
 if echo $CPPFLAGS | grep -v CMPI_VERSION
 then
-   CPPFLAGS="$CPPFLAGS -DCMPI_VERSION=90"
+   CPPFLAGS="$CPPFLAGS"
 fi
 
 # Display configuration options

@@ -128,5 +128,17 @@ class Linux_NFSv3SystemSetting : CIM_SystemSetting
    [Description
 	("User ID for anonymous access.") ]
    uint16 AnonUID;
+
+   [Description
+	("Crossmnt enabled if true") ]
+   boolean Crossmnt;
+
+   [Description
+	("Valid values are: all_squash, no_all_squash") ]
+   string AllSquash;
+
+   [Description
+	("Acl enabled if true") ]
+   boolean Acl;
 };
 

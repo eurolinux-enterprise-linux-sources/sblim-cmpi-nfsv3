@@ -573,9 +573,9 @@ char *NFSv3xmlyytext_ptr;
 #line 7 "util/xmlparser/xmllexer.l"
 #include <string.h>
 #include "xmlparser.h"
-#ifndef YY_FLEX_LEX_COMPAT
+/* #ifndef YY_FLEX_LEX_COMPAT
 int NFSv3xmlyylineno = 1;
-#endif
+#endif */
 /* Some useful regular expressions to use in the RULES section */
 /* Special mode just for when reading in unquoted VALUE text */
 

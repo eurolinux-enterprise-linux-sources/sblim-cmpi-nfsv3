@@ -8,7 +8,7 @@ BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
 Summary: SBLIM NFSV3 Instrumentation
 Name: sblim-cmpi-nfsv3
-Version: 1.1.0
+Version: 1.1.1
 Release: 1
 Group: Systems Management/Base
 URL: http://www.sblim.org

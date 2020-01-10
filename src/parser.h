@@ -51,7 +51,10 @@
      HIDE = 267,
      SUBTREECHECK = 268,
      SECURELOCKS = 269,
-     NUMBER = 270
+     NUMBER = 270,
+     CROSSMNT = 271,
+     ALLSQUASH = 272,
+     ACL = 273
    };
 #endif
 /* Tokens.  */
@@ -68,6 +71,9 @@
 #define SUBTREECHECK 268
 #define SECURELOCKS 269
 #define NUMBER 270
+#define CROSSMNT 271
+#define ALLSQUASH 272
+#define ACL 273
 
 
 
@@ -94,7 +100,7 @@ typedef union YYSTYPE
    char *		dateTime;
 }
 /* Line 1489 of yacc.c.  */
-#line 98 "parser.h"
+#line 104 "parser.h"
 	YYSTYPE;
 # define yystype YYSTYPE /* obsolescent; will be withdrawn */
 # define YYSTYPE_IS_DECLARED 1

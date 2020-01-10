@@ -7,9 +7,9 @@
 #include <string.h>
 #include "cmpidt.h"
 #include "parser.h"
-#ifndef YY_FLEX_LEX_COMPAT
+/* #ifndef YY_FLEX_LEX_COMPAT
 int yylineno = 1;
-#endif
+#endif */
 
 char * NFSv3comments = NULL;		/* String buffer to accumulate comments */
 %}
@@ -53,7 +53,6 @@ anonuid	{
 
 	/* The following lexical tokens return the token identifier and the value of the token (in yylval) */
 
-all_squash |
 no_root_squash |
 root_squash {
 	yylval.string = (char *)strdup(yytext);
@@ -88,6 +87,24 @@ hide |
 nohide	{
 	yylval.boolean = !strcmp(yytext,"hide");
 	return(HIDE);
+	}
+
+crossmnt |
+nocrossmnt {
+	yylval.boolean = !strcmp(yytext,"crossmnt");
+	return(CROSSMNT);
+	}
+
+all_squash |
+no_all_squash {
+	yylval.string = (char *)strdup(yytext);
+	return(ALLSQUASH);
+	}
+
+acl |
+no_acl {
+	yylval.boolean = !strcmp(yytext,"acl");
+	return(ACL);
 	}
 
 subtree_check |

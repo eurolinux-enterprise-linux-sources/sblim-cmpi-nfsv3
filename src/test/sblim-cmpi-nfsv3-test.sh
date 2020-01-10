@@ -24,7 +24,7 @@ fi
 # Run the tests for each class
 for CLASSNAME in $CLASSNAMES; do
    echo "Running tests for $CLASSNAME..."
-   ./run.sh $CLASSNAME
+   ./run.sh $CLASSNAME $*
 done
 
 # Cleanup
