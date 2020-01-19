@@ -1,0 +1,34 @@
+********************************************************************************
+class : Linux_NFSv3SystemSetting
+objectPath : Linux_NFSv3SystemSetting.SystemName="HOSTNAME",SystemCreationClassName="Linux_ComputerSystem",CreationClassName="Linux_NFSv3SystemSetting",SettingID="REMOTEHOST:/PATHNAME"
+
+--------------------------------------------------------------------------------
+Instance                                                       enumInstanceNames
+
+--------------------------------------------------------------------------------
+Instance                                                           enumInstances
+
+--------------------------------------------------------------------------------
+Instance                                                                     get
+
+--------------------------------------------------------------------------------
+Instance								     set
+
+--------------------------------------------------------------------------------
+Instance                                                                  create
+
+--------------------------------------------------------------------------------
+Instance                                                                  create
+Expected Exception : FAILED
+
+--------------------------------------------------------------------------------
+Instance                                                                  delete
+
+--------------------------------------------------------------------------------
+Instance                                                                  delete
+Expected Exception : FAILED
+
+--------------------------------------------------------------------------------
+Instance							       execQuery
+Expected Exception : NOT_SUPPORTED
+

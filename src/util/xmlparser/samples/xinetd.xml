@@ -1,0 +1,623 @@
+<INSTANCE CLASSNAME="Linux_XinetdConfigFile">
+ <PROPERTY NAME="SocketType" TYPE="string"> <VALUE>dgram</VALUE> </PROPERTY>
+ <PROPERTY NAME="Protocol" TYPE="string"> <VALUE>udp</VALUE> </PROPERTY>
+ <PROPERTY NAME="Wait" TYPE="boolean"> <VALUE>true</VALUE> </PROPERTY>
+ <PROPERTY NAME="User" TYPE="string"> <VALUE>amanda</VALUE> </PROPERTY>
+ <PROPERTY NAME="Group" TYPE="string"> <VALUE>disk</VALUE> </PROPERTY>
+ <PROPERTY NAME="Server" TYPE="string"> <VALUE>/usr/lib/amanda/amandad</VALUE> </PROPERTY>
+ <PROPERTY NAME="Disable" TYPE="boolean"> <VALUE>true</VALUE> </PROPERTY>
+ <PROPERTY NAME="EntryName" TYPE="string"> <VALUE>amanda</VALUE> </PROPERTY>
+ <PROPERTY NAME="Description" TYPE="string"> <VALUE># default: off
+# description:  The client for the Amanda backup system.\
+#               This must be on for systems being backed up\
+#               by Amanda.</VALUE> </PROPERTY>
+</INSTANCE>
+
+<INSTANCE CLASSNAME="Linux_XinetdConfigFile">
+ <PROPERTY NAME="SocketType" TYPE="string"> <VALUE>stream</VALUE> </PROPERTY>
+ <PROPERTY NAME="Protocol" TYPE="string"> <VALUE>tcp</VALUE> </PROPERTY>
+ <PROPERTY NAME="Wait" TYPE="boolean"> <VALUE>false</VALUE> </PROPERTY>
+ <PROPERTY NAME="User" TYPE="string"> <VALUE>amanda</VALUE> </PROPERTY>
+ <PROPERTY NAME="Group" TYPE="string"> <VALUE>disk</VALUE> </PROPERTY>
+ <PROPERTY NAME="Server" TYPE="string"> <VALUE>/usr/lib/amanda/amindexd</VALUE> </PROPERTY>
+ <PROPERTY NAME="Disable" TYPE="boolean"> <VALUE>true</VALUE> </PROPERTY>
+ <PROPERTY NAME="EntryName" TYPE="string"> <VALUE>amandaidx</VALUE> </PROPERTY>
+ <PROPERTY NAME="Description" TYPE="string"> <VALUE># default: off
+#
+# description: Part of the Amanda server package</VALUE> </PROPERTY>
+</INSTANCE>
+
+<INSTANCE CLASSNAME="Linux_XinetdConfigFile">
+ <PROPERTY NAME="SocketType" TYPE="string"> <VALUE>stream</VALUE> </PROPERTY>
+ <PROPERTY NAME="Protocol" TYPE="string"> <VALUE>tcp</VALUE> </PROPERTY>
+ <PROPERTY NAME="Wait" TYPE="boolean"> <VALUE>false</VALUE> </PROPERTY>
+ <PROPERTY NAME="User" TYPE="string"> <VALUE>amanda</VALUE> </PROPERTY>
+ <PROPERTY NAME="Group" TYPE="string"> <VALUE>disk</VALUE> </PROPERTY>
+ <PROPERTY NAME="Server" TYPE="string"> <VALUE>/usr/lib/amanda/amidxtaped</VALUE> </PROPERTY>
+ <PROPERTY NAME="Disable" TYPE="boolean"> <VALUE>true</VALUE> </PROPERTY>
+ <PROPERTY NAME="EntryName" TYPE="string"> <VALUE>amidxtape</VALUE> </PROPERTY>
+ <PROPERTY NAME="Description" TYPE="string"> <VALUE># default: off
+#
+# description: Part of the amanda server package
+#</VALUE> </PROPERTY>
+</INSTANCE>
+
+<INSTANCE CLASSNAME="Linux_XinetdConfigFile">
+ <PROPERTY NAME="Disable" TYPE="boolean"> <VALUE>true</VALUE> </PROPERTY>
+ <PROPERTY NAME="Type" TYPE="string"> <VALUE>INTERNAL</VALUE> </PROPERTY>
+ <PROPERTY NAME="Id" TYPE="string"> <VALUE>chargen-stream</VALUE> </PROPERTY>
+ <PROPERTY NAME="SocketType" TYPE="string"> <VALUE>stream</VALUE> </PROPERTY>
+ <PROPERTY NAME="Protocol" TYPE="string"> <VALUE>tcp</VALUE> </PROPERTY>
+ <PROPERTY NAME="User" TYPE="string"> <VALUE>root</VALUE> </PROPERTY>
+ <PROPERTY NAME="Wait" TYPE="boolean"> <VALUE>false</VALUE> </PROPERTY>
+ <PROPERTY NAME="EntryName" TYPE="string"> <VALUE>chargen-stream</VALUE> </PROPERTY>
+ <PROPERTY NAME="Description" TYPE="string"> <VALUE># default: off
+# description: A chargen server. This is the tcp \
+# version.</VALUE> </PROPERTY>
+</INSTANCE>
+
+<INSTANCE CLASSNAME="Linux_XinetdConfigFile">
+ <PROPERTY NAME="Disable" TYPE="boolean"> <VALUE>true</VALUE> </PROPERTY>
+ <PROPERTY NAME="Type" TYPE="string"> <VALUE>INTERNAL UNLISTED</VALUE> </PROPERTY>
+ <PROPERTY NAME="Id" TYPE="string"> <VALUE>chargen-dgram</VALUE> </PROPERTY>
+ <PROPERTY NAME="SocketType" TYPE="string"> <VALUE>dgram</VALUE> </PROPERTY>
+ <PROPERTY NAME="Protocol" TYPE="string"> <VALUE>udp</VALUE> </PROPERTY>
+ <PROPERTY NAME="User" TYPE="string"> <VALUE>root</VALUE> </PROPERTY>
+ <PROPERTY NAME="Wait" TYPE="boolean"> <VALUE>true</VALUE> </PROPERTY>
+ <PROPERTY NAME="Port" TYPE="uint16"> <VALUE>19</VALUE> </PROPERTY>
+ <PROPERTY NAME="EntryName" TYPE="string"> <VALUE>chargen-dgram</VALUE> </PROPERTY>
+ <PROPERTY NAME="Description" TYPE="string"> <VALUE># default: off
+# description: A chargen server. This is the udp \
+# version.</VALUE> </PROPERTY>
+</INSTANCE>
+
+<INSTANCE CLASSNAME="Linux_XinetdConfigFile">
+ <PROPERTY NAME="SocketType" TYPE="string"> <VALUE>dgram</VALUE> </PROPERTY>
+ <PROPERTY NAME="Wait" TYPE="boolean"> <VALUE>true</VALUE> </PROPERTY>
+ <PROPERTY NAME="User" TYPE="string"> <VALUE>root</VALUE> </PROPERTY>
+ <PROPERTY NAME="Server" TYPE="string"> <VALUE>/usr/sbin/in.comsat</VALUE> </PROPERTY>
+ <PROPERTY NAME="Disable" TYPE="boolean"> <VALUE>true</VALUE> </PROPERTY>
+ <PROPERTY NAME="EntryName" TYPE="string"> <VALUE>comsat</VALUE> </PROPERTY>
+ <PROPERTY NAME="Description" TYPE="string"> <VALUE># default: off
+# description: The comsat server is used by the biff client to \
+#		tell when new mail is present.</VALUE> </PROPERTY>
+</INSTANCE>
+
+<INSTANCE CLASSNAME="Linux_XinetdConfigFile">
+ <PROPERTY NAME="Disable" TYPE="boolean"> <VALUE>true</VALUE> </PROPERTY>
+ <PROPERTY NAME="Type" TYPE="string"> <VALUE>INTERNAL</VALUE> </PROPERTY>
+ <PROPERTY NAME="Id" TYPE="string"> <VALUE>daytime-stream</VALUE> </PROPERTY>
+ <PROPERTY NAME="SocketType" TYPE="string"> <VALUE>stream</VALUE> </PROPERTY>
+ <PROPERTY NAME="Protocol" TYPE="string"> <VALUE>tcp</VALUE> </PROPERTY>
+ <PROPERTY NAME="User" TYPE="string"> <VALUE>root</VALUE> </PROPERTY>
+ <PROPERTY NAME="Wait" TYPE="boolean"> <VALUE>false</VALUE> </PROPERTY>
+ <PROPERTY NAME="EntryName" TYPE="string"> <VALUE>daytime-stream</VALUE> </PROPERTY>
+ <PROPERTY NAME="Description" TYPE="string"> <VALUE># default: off
+# description: A daytime server. This is the tcp \
+# version.</VALUE> </PROPERTY>
+</INSTANCE>
+
+<INSTANCE CLASSNAME="Linux_XinetdConfigFile">
+ <PROPERTY NAME="Disable" TYPE="boolean"> <VALUE>true</VALUE> </PROPERTY>
+ <PROPERTY NAME="Type" TYPE="string"> <VALUE>INTERNAL UNLISTED</VALUE> </PROPERTY>
+ <PROPERTY NAME="Id" TYPE="string"> <VALUE>daytime-dgram</VALUE> </PROPERTY>
+ <PROPERTY NAME="SocketType" TYPE="string"> <VALUE>dgram</VALUE> </PROPERTY>
+ <PROPERTY NAME="Protocol" TYPE="string"> <VALUE>udp</VALUE> </PROPERTY>
+ <PROPERTY NAME="User" TYPE="string"> <VALUE>root</VALUE> </PROPERTY>
+ <PROPERTY NAME="Wait" TYPE="boolean"> <VALUE>true</VALUE> </PROPERTY>
+ <PROPERTY NAME="Port" TYPE="uint16"> <VALUE>13</VALUE> </PROPERTY>
+ <PROPERTY NAME="EntryName" TYPE="string"> <VALUE>daytime-dgram</VALUE> </PROPERTY>
+ <PROPERTY NAME="Description" TYPE="string"> <VALUE># default: off
+# description: A daytime server. This is the udp \
+# version.</VALUE> </PROPERTY>
+</INSTANCE>
+
+<INSTANCE CLASSNAME="Linux_XinetdConfigFile">
+ <PROPERTY NAME="Port" TYPE="uint16"> <VALUE>1178</VALUE> </PROPERTY>
+ <PROPERTY NAME="SocketType" TYPE="string"> <VALUE>stream</VALUE> </PROPERTY>
+ <PROPERTY NAME="Wait" TYPE="boolean"> <VALUE>false</VALUE> </PROPERTY>
+ <PROPERTY NAME="User" TYPE="string"> <VALUE>nobody</VALUE> </PROPERTY>
+ <PROPERTY NAME="Server" TYPE="string"> <VALUE>/usr/sbin/dbskkd-cdb</VALUE> </PROPERTY>
+ <PROPERTY NAME="Disable" TYPE="boolean"> <VALUE>true</VALUE> </PROPERTY>
+ <PROPERTY NAME="OnlyFrom" TYPE="string"> <VALUE.ARRAY> <VALUE>127.0.0.1</VALUE> </VALUE.ARRAY> </PROPERTY>
+ <PROPERTY NAME="LogOnFailure" TYPE="string"> <VALUE.ARRAY> <VALUE>+(USERID)</VALUE> </VALUE.ARRAY> </PROPERTY>
+ <PROPERTY NAME="EntryName" TYPE="string"> <VALUE>skkserv</VALUE> </PROPERTY>
+ <PROPERTY NAME="Description" TYPE="string"> <VALUE># default: off
+# description: dbskkd-cdb is the one of the implementations of skkserv.
+#	       skkserv is the dictionary server for the Simple Kana to
+#              Kanji conversion program.</VALUE> </PROPERTY>
+</INSTANCE>
+
+<INSTANCE CLASSNAME="Linux_XinetdConfigFile">
+ <PROPERTY NAME="Disable" TYPE="boolean"> <VALUE>true</VALUE> </PROPERTY>
+ <PROPERTY NAME="Type" TYPE="string"> <VALUE>INTERNAL</VALUE> </PROPERTY>
+ <PROPERTY NAME="Id" TYPE="string"> <VALUE>echo-stream</VALUE> </PROPERTY>
+ <PROPERTY NAME="SocketType" TYPE="string"> <VALUE>stream</VALUE> </PROPERTY>
+ <PROPERTY NAME="Protocol" TYPE="string"> <VALUE>tcp</VALUE> </PROPERTY>
+ <PROPERTY NAME="User" TYPE="string"> <VALUE>root</VALUE> </PROPERTY>
+ <PROPERTY NAME="Wait" TYPE="boolean"> <VALUE>false</VALUE> </PROPERTY>
+ <PROPERTY NAME="EntryName" TYPE="string"> <VALUE>echo-stream</VALUE> </PROPERTY>
+ <PROPERTY NAME="Description" TYPE="string"> <VALUE># default: off
+# description: An echo server. This is the tcp \
+# version.</VALUE> </PROPERTY>
+</INSTANCE>
+
+<INSTANCE CLASSNAME="Linux_XinetdConfigFile">
+ <PROPERTY NAME="Disable" TYPE="boolean"> <VALUE>true</VALUE> </PROPERTY>
+ <PROPERTY NAME="Type" TYPE="string"> <VALUE>INTERNAL UNLISTED</VALUE> </PROPERTY>
+ <PROPERTY NAME="Id" TYPE="string"> <VALUE>echo-dgram</VALUE> </PROPERTY>
+ <PROPERTY NAME="SocketType" TYPE="string"> <VALUE>dgram</VALUE> </PROPERTY>
+ <PROPERTY NAME="Protocol" TYPE="string"> <VALUE>udp</VALUE> </PROPERTY>
+ <PROPERTY NAME="User" TYPE="string"> <VALUE>root</VALUE> </PROPERTY>
+ <PROPERTY NAME="Wait" TYPE="boolean"> <VALUE>true</VALUE> </PROPERTY>
+ <PROPERTY NAME="Port" TYPE="uint16"> <VALUE>7</VALUE> </PROPERTY>
+ <PROPERTY NAME="EntryName" TYPE="string"> <VALUE>echo-dgram</VALUE> </PROPERTY>
+ <PROPERTY NAME="Description" TYPE="string"> <VALUE># default: off
+# description: An echo server. This is the udp \
+# version.</VALUE> </PROPERTY>
+</INSTANCE>
+
+<INSTANCE CLASSNAME="Linux_XinetdConfigFile">
+ <PROPERTY NAME="Flags" TYPE="string"> <VALUE>REUSE</VALUE> </PROPERTY>
+ <PROPERTY NAME="SocketType" TYPE="string"> <VALUE>stream</VALUE> </PROPERTY>
+ <PROPERTY NAME="Wait" TYPE="boolean"> <VALUE>false</VALUE> </PROPERTY>
+ <PROPERTY NAME="User" TYPE="string"> <VALUE>root</VALUE> </PROPERTY>
+ <PROPERTY NAME="Server" TYPE="string"> <VALUE>/usr/kerberos/sbin/klogind</VALUE> </PROPERTY>
+ <PROPERTY NAME="ServerArgs" TYPE="string"> <VALUE>-e -5</VALUE> </PROPERTY>
+ <PROPERTY NAME="Disable" TYPE="boolean"> <VALUE>true</VALUE> </PROPERTY>
+ <PROPERTY NAME="EntryName" TYPE="string"> <VALUE>eklogin</VALUE> </PROPERTY>
+ <PROPERTY NAME="Description" TYPE="string"> <VALUE># default: off
+# description: The encrypting kerberized rlogin server accepts rlogin sessions \
+#              authenticated and encrypted with Kerberos 5.</VALUE> </PROPERTY>
+</INSTANCE>
+
+<INSTANCE CLASSNAME="Linux_XinetdConfigFile">
+ <PROPERTY NAME="Disable" TYPE="boolean"> <VALUE>true</VALUE> </PROPERTY>
+ <PROPERTY NAME="SocketType" TYPE="string"> <VALUE>stream</VALUE> </PROPERTY>
+ <PROPERTY NAME="Wait" TYPE="boolean"> <VALUE>false</VALUE> </PROPERTY>
+ <PROPERTY NAME="User" TYPE="string"> <VALUE>nobody</VALUE> </PROPERTY>
+ <PROPERTY NAME="Server" TYPE="string"> <VALUE>/usr/sbin/in.fingerd</VALUE> </PROPERTY>
+ <PROPERTY NAME="EntryName" TYPE="string"> <VALUE>finger</VALUE> </PROPERTY>
+ <PROPERTY NAME="Description" TYPE="string"> <VALUE># default: on
+# description: The finger server answers finger requests. Finger is \
+#	a protocol that allows remote users to see information such \
+#	as login name and last login time for local users.</VALUE> </PROPERTY>
+</INSTANCE>
+
+<INSTANCE CLASSNAME="Linux_XinetdConfigFile">
+ <PROPERTY NAME="SocketType" TYPE="string"> <VALUE>stream</VALUE> </PROPERTY>
+ <PROPERTY NAME="Protocol" TYPE="string"> <VALUE>tcp</VALUE> </PROPERTY>
+ <PROPERTY NAME="Wait" TYPE="boolean"> <VALUE>false</VALUE> </PROPERTY>
+ <PROPERTY NAME="User" TYPE="string"> <VALUE>root</VALUE> </PROPERTY>
+ <PROPERTY NAME="Server" TYPE="string"> <VALUE>/opt/gt2/sbin/globus-gatekeeper</VALUE> </PROPERTY>
+ <PROPERTY NAME="ServerArgs" TYPE="string"> <VALUE>-conf /opt/gt2/etc/globus-gatekeeper.conf</VALUE> </PROPERTY>
+ <PROPERTY NAME="Disable" TYPE="boolean"> <VALUE>false</VALUE> </PROPERTY>
+ <PROPERTY NAME="Env" TYPE="string"> <VALUE.ARRAY> <VALUE>LD_LIBRARY_PATH=/opt/gt2/lib</VALUE> </VALUE.ARRAY> </PROPERTY>
+ <PROPERTY NAME="EntryName" TYPE="string"> <VALUE>gsigatekeeper</VALUE> </PROPERTY>
+ <PROPERTY NAME="Description" TYPE="string"> <VALUE># description: globus-gatekeeper is the GRAM service for the IBM Grid Toolbox</VALUE> </PROPERTY>
+</INSTANCE>
+
+<INSTANCE CLASSNAME="Linux_XinetdConfigFile">
+ <PROPERTY NAME="Instances" TYPE="string"> <VALUE>1000</VALUE> </PROPERTY>
+ <PROPERTY NAME="SocketType" TYPE="string"> <VALUE>stream</VALUE> </PROPERTY>
+ <PROPERTY NAME="Wait" TYPE="boolean"> <VALUE>false</VALUE> </PROPERTY>
+ <PROPERTY NAME="User" TYPE="string"> <VALUE>root</VALUE> </PROPERTY>
+ <PROPERTY NAME="Server" TYPE="string"> <VALUE>/opt/gt2/sbin/in.ftpd</VALUE> </PROPERTY>
+ <PROPERTY NAME="ServerArgs" TYPE="string"> <VALUE>-l -a -G /opt/gt2</VALUE> </PROPERTY>
+ <PROPERTY NAME="Nice" TYPE="sint16"> <VALUE>10</VALUE> </PROPERTY>
+ <PROPERTY NAME="Disable" TYPE="boolean"> <VALUE>false</VALUE> </PROPERTY>
+ <PROPERTY NAME="LogOnSuccess" TYPE="string"> <VALUE.ARRAY> <VALUE>+(DURATION USERID)</VALUE> </VALUE.ARRAY> </PROPERTY>
+ <PROPERTY NAME="LogOnFailure" TYPE="string"> <VALUE.ARRAY> <VALUE>+(USERID)</VALUE> </VALUE.ARRAY> </PROPERTY>
+ <PROPERTY NAME="Env" TYPE="string"> <VALUE.ARRAY> <VALUE>LD_LIBRARY_PATH=/opt/gt2/lib</VALUE> </VALUE.ARRAY> </PROPERTY>
+ <PROPERTY NAME="EntryName" TYPE="string"> <VALUE>gsiftp</VALUE> </PROPERTY>
+ <PROPERTY NAME="Description" TYPE="string"> <VALUE># description: GridFTP is the GSI-enabled ftp server for the IBM Grid Toolbox</VALUE> </PROPERTY>
+</INSTANCE>
+
+<INSTANCE CLASSNAME="Linux_XinetdConfigFile">
+ <PROPERTY NAME="Flags" TYPE="string"> <VALUE>REUSE</VALUE> </PROPERTY>
+ <PROPERTY NAME="SocketType" TYPE="string"> <VALUE>stream</VALUE> </PROPERTY>
+ <PROPERTY NAME="Wait" TYPE="boolean"> <VALUE>false</VALUE> </PROPERTY>
+ <PROPERTY NAME="User" TYPE="string"> <VALUE>root</VALUE> </PROPERTY>
+ <PROPERTY NAME="Server" TYPE="string"> <VALUE>/usr/kerberos/sbin/ftpd</VALUE> </PROPERTY>
+ <PROPERTY NAME="ServerArgs" TYPE="string"> <VALUE>-l -a</VALUE> </PROPERTY>
+ <PROPERTY NAME="Disable" TYPE="boolean"> <VALUE>true</VALUE> </PROPERTY>
+ <PROPERTY NAME="LogOnFailure" TYPE="string"> <VALUE.ARRAY> <VALUE>+(USERID)</VALUE> </VALUE.ARRAY> </PROPERTY>
+ <PROPERTY NAME="EntryName" TYPE="string"> <VALUE>ftp</VALUE> </PROPERTY>
+ <PROPERTY NAME="Description" TYPE="string"> <VALUE># default: off
+# description: The kerberized FTP server accepts FTP connections \
+#              that can be authenticated with Kerberos 5.</VALUE> </PROPERTY>
+</INSTANCE>
+
+<INSTANCE CLASSNAME="Linux_XinetdConfigFile">
+ <PROPERTY NAME="SocketType" TYPE="string"> <VALUE>stream</VALUE> </PROPERTY>
+ <PROPERTY NAME="Wait" TYPE="boolean"> <VALUE>false</VALUE> </PROPERTY>
+ <PROPERTY NAME="User" TYPE="string"> <VALUE>root</VALUE> </PROPERTY>
+ <PROPERTY NAME="Server" TYPE="string"> <VALUE>/usr/sbin/imapd</VALUE> </PROPERTY>
+ <PROPERTY NAME="Disable" TYPE="boolean"> <VALUE>true</VALUE> </PROPERTY>
+ <PROPERTY NAME="LogOnSuccess" TYPE="string"> <VALUE.ARRAY> <VALUE>+(HOST DURATION)</VALUE> </VALUE.ARRAY> </PROPERTY>
+ <PROPERTY NAME="LogOnFailure" TYPE="string"> <VALUE.ARRAY> <VALUE>+(HOST)</VALUE> </VALUE.ARRAY> </PROPERTY>
+ <PROPERTY NAME="EntryName" TYPE="string"> <VALUE>imap</VALUE> </PROPERTY>
+ <PROPERTY NAME="Description" TYPE="string"> <VALUE># default: off
+# description: The IMAP service allows remote users to access their mail using \
+#              an IMAP client such as Mutt, Pine, fetchmail, or Netscape \
+#              Communicator.</VALUE> </PROPERTY>
+</INSTANCE>
+
+<INSTANCE CLASSNAME="Linux_XinetdConfigFile">
+ <PROPERTY NAME="SocketType" TYPE="string"> <VALUE>stream</VALUE> </PROPERTY>
+ <PROPERTY NAME="Wait" TYPE="boolean"> <VALUE>false</VALUE> </PROPERTY>
+ <PROPERTY NAME="User" TYPE="string"> <VALUE>root</VALUE> </PROPERTY>
+ <PROPERTY NAME="Server" TYPE="string"> <VALUE>/usr/sbin/imapd</VALUE> </PROPERTY>
+ <PROPERTY NAME="Disable" TYPE="boolean"> <VALUE>true</VALUE> </PROPERTY>
+ <PROPERTY NAME="LogOnSuccess" TYPE="string"> <VALUE.ARRAY> <VALUE>+(HOST DURATION)</VALUE> </VALUE.ARRAY> </PROPERTY>
+ <PROPERTY NAME="LogOnFailure" TYPE="string"> <VALUE.ARRAY> <VALUE>+(HOST)</VALUE> </VALUE.ARRAY> </PROPERTY>
+ <PROPERTY NAME="EntryName" TYPE="string"> <VALUE>imaps</VALUE> </PROPERTY>
+ <PROPERTY NAME="Description" TYPE="string"> <VALUE># default: off
+# description: The IMAPS service allows remote users to access their mail \
+#	       using an IMAP client with SSL support such as Netscape \
+#	       Communicator or fetchmail.</VALUE> </PROPERTY>
+</INSTANCE>
+
+<INSTANCE CLASSNAME="Linux_XinetdConfigFile">
+ <PROPERTY NAME="SocketType" TYPE="string"> <VALUE>stream</VALUE> </PROPERTY>
+ <PROPERTY NAME="Wait" TYPE="boolean"> <VALUE>false</VALUE> </PROPERTY>
+ <PROPERTY NAME="User" TYPE="string"> <VALUE>root</VALUE> </PROPERTY>
+ <PROPERTY NAME="Server" TYPE="string"> <VALUE>/usr/sbin/ipop2d</VALUE> </PROPERTY>
+ <PROPERTY NAME="Disable" TYPE="boolean"> <VALUE>true</VALUE> </PROPERTY>
+ <PROPERTY NAME="LogOnSuccess" TYPE="string"> <VALUE.ARRAY> <VALUE>+(HOST DURATION)</VALUE> </VALUE.ARRAY> </PROPERTY>
+ <PROPERTY NAME="LogOnFailure" TYPE="string"> <VALUE.ARRAY> <VALUE>+(HOST)</VALUE> </VALUE.ARRAY> </PROPERTY>
+ <PROPERTY NAME="EntryName" TYPE="string"> <VALUE>pop2</VALUE> </PROPERTY>
+ <PROPERTY NAME="Description" TYPE="string"> <VALUE># default: off
+# description: The POP2 service allows remote users to access their mail \
+#              using an POP2 client such as fetchmail.  In most cases, clients \
+#              support POP3 instead of POP2, so enabling this service is rarely \
+#              necessary.</VALUE> </PROPERTY>
+</INSTANCE>
+
+<INSTANCE CLASSNAME="Linux_XinetdConfigFile">
+ <PROPERTY NAME="SocketType" TYPE="string"> <VALUE>stream</VALUE> </PROPERTY>
+ <PROPERTY NAME="Wait" TYPE="boolean"> <VALUE>false</VALUE> </PROPERTY>
+ <PROPERTY NAME="User" TYPE="string"> <VALUE>root</VALUE> </PROPERTY>
+ <PROPERTY NAME="Server" TYPE="string"> <VALUE>/usr/sbin/ipop3d</VALUE> </PROPERTY>
+ <PROPERTY NAME="Disable" TYPE="boolean"> <VALUE>true</VALUE> </PROPERTY>
+ <PROPERTY NAME="LogOnSuccess" TYPE="string"> <VALUE.ARRAY> <VALUE>+(HOST DURATION)</VALUE> </VALUE.ARRAY> </PROPERTY>
+ <PROPERTY NAME="LogOnFailure" TYPE="string"> <VALUE.ARRAY> <VALUE>+(HOST)</VALUE> </VALUE.ARRAY> </PROPERTY>
+ <PROPERTY NAME="EntryName" TYPE="string"> <VALUE>pop3</VALUE> </PROPERTY>
+ <PROPERTY NAME="Description" TYPE="string"> <VALUE># default: off
+# description: The POP3 service allows remote users to access their mail \
+#              using an POP3 client such as Netscape Communicator, mutt, \
+#	       or fetchmail.</VALUE> </PROPERTY>
+</INSTANCE>
+
+<INSTANCE CLASSNAME="Linux_XinetdConfigFile">
+ <PROPERTY NAME="Flags" TYPE="string"> <VALUE>REUSE</VALUE> </PROPERTY>
+ <PROPERTY NAME="SocketType" TYPE="string"> <VALUE>stream</VALUE> </PROPERTY>
+ <PROPERTY NAME="Wait" TYPE="boolean"> <VALUE>false</VALUE> </PROPERTY>
+ <PROPERTY NAME="User" TYPE="string"> <VALUE>root</VALUE> </PROPERTY>
+ <PROPERTY NAME="Server" TYPE="string"> <VALUE>/usr/kerberos/sbin/klogind</VALUE> </PROPERTY>
+ <PROPERTY NAME="ServerArgs" TYPE="string"> <VALUE>-5</VALUE> </PROPERTY>
+ <PROPERTY NAME="Disable" TYPE="boolean"> <VALUE>true</VALUE> </PROPERTY>
+ <PROPERTY NAME="EntryName" TYPE="string"> <VALUE>klogin</VALUE> </PROPERTY>
+ <PROPERTY NAME="Description" TYPE="string"> <VALUE># default: off
+# description: The kerberized rlogin server accepts BSD-style rlogin sessions, \
+#              but uses Kerberos 5 authentication.</VALUE> </PROPERTY>
+</INSTANCE>
+
+<INSTANCE CLASSNAME="Linux_XinetdConfigFile">
+ <PROPERTY NAME="Disable" TYPE="boolean"> <VALUE>true</VALUE> </PROPERTY>
+ <PROPERTY NAME="SocketType" TYPE="string"> <VALUE>dgram</VALUE> </PROPERTY>
+ <PROPERTY NAME="Wait" TYPE="boolean"> <VALUE>true</VALUE> </PROPERTY>
+ <PROPERTY NAME="User" TYPE="string"> <VALUE>root</VALUE> </PROPERTY>
+ <PROPERTY NAME="Group" TYPE="string"> <VALUE>tty</VALUE> </PROPERTY>
+ <PROPERTY NAME="Server" TYPE="string"> <VALUE>/usr/bin/kotalkd</VALUE> </PROPERTY>
+ <PROPERTY NAME="EntryName" TYPE="string"> <VALUE>talk</VALUE> </PROPERTY>
+ <PROPERTY NAME="Description" TYPE="string"> <VALUE># default: off
+# description: KDE version of the talk server (accepting talk requests
+#              for chatting with users on other systems).</VALUE> </PROPERTY>
+</INSTANCE>
+
+<INSTANCE CLASSNAME="Linux_XinetdConfigFile">
+ <PROPERTY NAME="Flags" TYPE="string"> <VALUE>REUSE</VALUE> </PROPERTY>
+ <PROPERTY NAME="SocketType" TYPE="string"> <VALUE>stream</VALUE> </PROPERTY>
+ <PROPERTY NAME="Wait" TYPE="boolean"> <VALUE>false</VALUE> </PROPERTY>
+ <PROPERTY NAME="User" TYPE="string"> <VALUE>root</VALUE> </PROPERTY>
+ <PROPERTY NAME="Server" TYPE="string"> <VALUE>/usr/kerberos/sbin/telnetd</VALUE> </PROPERTY>
+ <PROPERTY NAME="Disable" TYPE="boolean"> <VALUE>true</VALUE> </PROPERTY>
+ <PROPERTY NAME="LogOnFailure" TYPE="string"> <VALUE.ARRAY> <VALUE>+(USERID)</VALUE> </VALUE.ARRAY> </PROPERTY>
+ <PROPERTY NAME="EntryName" TYPE="string"> <VALUE>telnet</VALUE> </PROPERTY>
+ <PROPERTY NAME="Description" TYPE="string"> <VALUE># default: off
+# description: The kerberized telnet server accepts normal telnet sessions, \
+#              but can also use Kerberos 5 authentication.</VALUE> </PROPERTY>
+</INSTANCE>
+
+<INSTANCE CLASSNAME="Linux_XinetdConfigFile">
+ <PROPERTY NAME="Flags" TYPE="string"> <VALUE>REUSE</VALUE> </PROPERTY>
+ <PROPERTY NAME="SocketType" TYPE="string"> <VALUE>stream</VALUE> </PROPERTY>
+ <PROPERTY NAME="Wait" TYPE="boolean"> <VALUE>false</VALUE> </PROPERTY>
+ <PROPERTY NAME="User" TYPE="string"> <VALUE>root</VALUE> </PROPERTY>
+ <PROPERTY NAME="Server" TYPE="string"> <VALUE>/usr/kerberos/sbin/kshd</VALUE> </PROPERTY>
+ <PROPERTY NAME="ServerArgs" TYPE="string"> <VALUE>-e -5</VALUE> </PROPERTY>
+ <PROPERTY NAME="Disable" TYPE="boolean"> <VALUE>true</VALUE> </PROPERTY>
+ <PROPERTY NAME="EntryName" TYPE="string"> <VALUE>kshell</VALUE> </PROPERTY>
+ <PROPERTY NAME="Description" TYPE="string"> <VALUE># default: off
+# description: The kerberized rshell server accepts rshell commands \
+#              authenticated and encrypted with Kerberos 5.</VALUE> </PROPERTY>
+</INSTANCE>
+
+<INSTANCE CLASSNAME="Linux_XinetdConfigFile">
+ <PROPERTY NAME="Disable" TYPE="boolean"> <VALUE>true</VALUE> </PROPERTY>
+ <PROPERTY NAME="SocketType" TYPE="string"> <VALUE>dgram</VALUE> </PROPERTY>
+ <PROPERTY NAME="Wait" TYPE="boolean"> <VALUE>true</VALUE> </PROPERTY>
+ <PROPERTY NAME="User" TYPE="string"> <VALUE>root</VALUE> </PROPERTY>
+ <PROPERTY NAME="Group" TYPE="string"> <VALUE>tty</VALUE> </PROPERTY>
+ <PROPERTY NAME="Server" TYPE="string"> <VALUE>/usr/bin/ktalkd</VALUE> </PROPERTY>
+ <PROPERTY NAME="EntryName" TYPE="string"> <VALUE>ntalk</VALUE> </PROPERTY>
+ <PROPERTY NAME="Description" TYPE="string"> <VALUE># default: off
+# description: KDE version of the talk server (accepting talk requests
+#              for chatting with users on other systems).</VALUE> </PROPERTY>
+</INSTANCE>
+
+<INSTANCE CLASSNAME="Linux_XinetdConfigFile">
+ <PROPERTY NAME="Disable" TYPE="boolean"> <VALUE>true</VALUE> </PROPERTY>
+ <PROPERTY NAME="SocketType" TYPE="string"> <VALUE>dgram</VALUE> </PROPERTY>
+ <PROPERTY NAME="Wait" TYPE="boolean"> <VALUE>true</VALUE> </PROPERTY>
+ <PROPERTY NAME="User" TYPE="string"> <VALUE>nobody</VALUE> </PROPERTY>
+ <PROPERTY NAME="Group" TYPE="string"> <VALUE>tty</VALUE> </PROPERTY>
+ <PROPERTY NAME="Server" TYPE="string"> <VALUE>/usr/sbin/in.ntalkd</VALUE> </PROPERTY>
+ <PROPERTY NAME="EntryName" TYPE="string"> <VALUE>ntalk</VALUE> </PROPERTY>
+ <PROPERTY NAME="Description" TYPE="string"> <VALUE># default: off
+# description: The ntalk server accepts ntalk connections, for chatting \
+#	with users on different systems.</VALUE> </PROPERTY>
+</INSTANCE>
+
+<INSTANCE CLASSNAME="Linux_XinetdConfigFile">
+ <PROPERTY NAME="SocketType" TYPE="string"> <VALUE>stream</VALUE> </PROPERTY>
+ <PROPERTY NAME="Wait" TYPE="boolean"> <VALUE>false</VALUE> </PROPERTY>
+ <PROPERTY NAME="User" TYPE="string"> <VALUE>root</VALUE> </PROPERTY>
+ <PROPERTY NAME="Server" TYPE="string"> <VALUE>/usr/sbin/ipop3d</VALUE> </PROPERTY>
+ <PROPERTY NAME="Disable" TYPE="boolean"> <VALUE>true</VALUE> </PROPERTY>
+ <PROPERTY NAME="LogOnSuccess" TYPE="string"> <VALUE.ARRAY> <VALUE>+(HOST DURATION)</VALUE> </VALUE.ARRAY> </PROPERTY>
+ <PROPERTY NAME="LogOnFailure" TYPE="string"> <VALUE.ARRAY> <VALUE>+(HOST)</VALUE> </VALUE.ARRAY> </PROPERTY>
+ <PROPERTY NAME="EntryName" TYPE="string"> <VALUE>pop3s</VALUE> </PROPERTY>
+ <PROPERTY NAME="Description" TYPE="string"> <VALUE># default: off
+# description: The POP3S service allows remote users to access their mail \
+#              using an POP3 client with SSL support such as fetchmail.</VALUE> </PROPERTY>
+</INSTANCE>
+
+<INSTANCE CLASSNAME="Linux_XinetdConfigFile">
+ <PROPERTY NAME="Disable" TYPE="boolean"> <VALUE>true</VALUE> </PROPERTY>
+ <PROPERTY NAME="SocketType" TYPE="string"> <VALUE>stream</VALUE> </PROPERTY>
+ <PROPERTY NAME="Wait" TYPE="boolean"> <VALUE>false</VALUE> </PROPERTY>
+ <PROPERTY NAME="User" TYPE="string"> <VALUE>root</VALUE> </PROPERTY>
+ <PROPERTY NAME="Server" TYPE="string"> <VALUE>/usr/sbin/in.rexecd</VALUE> </PROPERTY>
+ <PROPERTY NAME="LogOnSuccess" TYPE="string"> <VALUE.ARRAY> <VALUE>+(USERID)</VALUE> </VALUE.ARRAY> </PROPERTY>
+ <PROPERTY NAME="LogOnFailure" TYPE="string"> <VALUE.ARRAY> <VALUE>+(USERID)</VALUE> </VALUE.ARRAY> </PROPERTY>
+ <PROPERTY NAME="EntryName" TYPE="string"> <VALUE>exec</VALUE> </PROPERTY>
+ <PROPERTY NAME="Description" TYPE="string"> <VALUE># default: off
+# description: Rexecd is the server for the rexec(3) routine.  The server \
+#	provides remote execution facilities with authentication based \
+#	on user names and passwords.</VALUE> </PROPERTY>
+</INSTANCE>
+
+<INSTANCE CLASSNAME="Linux_XinetdConfigFile">
+ <PROPERTY NAME="Disable" TYPE="boolean"> <VALUE>true</VALUE> </PROPERTY>
+ <PROPERTY NAME="SocketType" TYPE="string"> <VALUE>stream</VALUE> </PROPERTY>
+ <PROPERTY NAME="Wait" TYPE="boolean"> <VALUE>false</VALUE> </PROPERTY>
+ <PROPERTY NAME="User" TYPE="string"> <VALUE>root</VALUE> </PROPERTY>
+ <PROPERTY NAME="Server" TYPE="string"> <VALUE>/usr/sbin/in.rlogind</VALUE> </PROPERTY>
+ <PROPERTY NAME="LogOnSuccess" TYPE="string"> <VALUE.ARRAY> <VALUE>+(USERID)</VALUE> </VALUE.ARRAY> </PROPERTY>
+ <PROPERTY NAME="LogOnFailure" TYPE="string"> <VALUE.ARRAY> <VALUE>+(USERID)</VALUE> </VALUE.ARRAY> </PROPERTY>
+ <PROPERTY NAME="EntryName" TYPE="string"> <VALUE>login</VALUE> </PROPERTY>
+ <PROPERTY NAME="Description" TYPE="string"> <VALUE># default: on
+# description: rlogind is the server for the rlogin(1) program.  The server \
+#	provides a remote login facility with authentication based on \
+#	privileged port numbers from trusted hosts.</VALUE> </PROPERTY>
+</INSTANCE>
+
+<INSTANCE CLASSNAME="Linux_XinetdConfigFile">
+ <PROPERTY NAME="Disable" TYPE="boolean"> <VALUE>true</VALUE> </PROPERTY>
+ <PROPERTY NAME="SocketType" TYPE="string"> <VALUE>stream</VALUE> </PROPERTY>
+ <PROPERTY NAME="Wait" TYPE="boolean"> <VALUE>false</VALUE> </PROPERTY>
+ <PROPERTY NAME="User" TYPE="string"> <VALUE>root</VALUE> </PROPERTY>
+ <PROPERTY NAME="Server" TYPE="string"> <VALUE>/usr/sbin/in.rshd</VALUE> </PROPERTY>
+ <PROPERTY NAME="LogOnSuccess" TYPE="string"> <VALUE.ARRAY> <VALUE>+(USERID)</VALUE> </VALUE.ARRAY> </PROPERTY>
+ <PROPERTY NAME="LogOnFailure" TYPE="string"> <VALUE.ARRAY> <VALUE>+(USERID)</VALUE> </VALUE.ARRAY> </PROPERTY>
+ <PROPERTY NAME="EntryName" TYPE="string"> <VALUE>shell</VALUE> </PROPERTY>
+ <PROPERTY NAME="Description" TYPE="string"> <VALUE># default: on
+# description: The rshd server is the server for the rcmd(3) routine and, \
+#	consequently, for the rsh(1) program.  The server provides \
+#	remote execution facilities with authentication based on \
+#	privileged port numbers from trusted hosts.</VALUE> </PROPERTY>
+</INSTANCE>
+
+<INSTANCE CLASSNAME="Linux_XinetdConfigFile">
+ <PROPERTY NAME="Disable" TYPE="boolean"> <VALUE>true</VALUE> </PROPERTY>
+ <PROPERTY NAME="SocketType" TYPE="string"> <VALUE>stream</VALUE> </PROPERTY>
+ <PROPERTY NAME="Wait" TYPE="boolean"> <VALUE>false</VALUE> </PROPERTY>
+ <PROPERTY NAME="User" TYPE="string"> <VALUE>root</VALUE> </PROPERTY>
+ <PROPERTY NAME="Server" TYPE="string"> <VALUE>/usr/bin/rsync</VALUE> </PROPERTY>
+ <PROPERTY NAME="ServerArgs" TYPE="string"> <VALUE>--daemon</VALUE> </PROPERTY>
+ <PROPERTY NAME="LogOnFailure" TYPE="string"> <VALUE.ARRAY> <VALUE>+(USERID)</VALUE> </VALUE.ARRAY> </PROPERTY>
+ <PROPERTY NAME="EntryName" TYPE="string"> <VALUE>rsync</VALUE> </PROPERTY>
+ <PROPERTY NAME="Description" TYPE="string"> <VALUE># default: off
+# description: The rsync server is a good addition to am ftp server, as it \
+#	allows crc checksumming etc.</VALUE> </PROPERTY>
+</INSTANCE>
+
+<INSTANCE CLASSNAME="Linux_XinetdConfigFile">
+ <PROPERTY NAME="Type" TYPE="string"> <VALUE>INTERNAL UNLISTED</VALUE> </PROPERTY>
+ <PROPERTY NAME="Port" TYPE="uint16"> <VALUE>9099</VALUE> </PROPERTY>
+ <PROPERTY NAME="SocketType" TYPE="string"> <VALUE>stream</VALUE> </PROPERTY>
+ <PROPERTY NAME="Protocol" TYPE="string"> <VALUE>tcp</VALUE> </PROPERTY>
+ <PROPERTY NAME="Wait" TYPE="boolean"> <VALUE>false</VALUE> </PROPERTY>
+ <PROPERTY NAME="Disable" TYPE="boolean"> <VALUE>true</VALUE> </PROPERTY>
+ <PROPERTY NAME="OnlyFrom" TYPE="string"> <VALUE.ARRAY> <VALUE>127.0.0.1</VALUE> </VALUE.ARRAY> </PROPERTY>
+ <PROPERTY NAME="EntryName" TYPE="string"> <VALUE>servers</VALUE> </PROPERTY>
+ <PROPERTY NAME="Description" TYPE="string"> <VALUE># default: off
+# description: An internal xinetd service, listing active servers.</VALUE> </PROPERTY>
+</INSTANCE>
+
+<INSTANCE CLASSNAME="Linux_XinetdConfigFile">
+ <PROPERTY NAME="Type" TYPE="string"> <VALUE>INTERNAL UNLISTED</VALUE> </PROPERTY>
+ <PROPERTY NAME="Port" TYPE="uint16"> <VALUE>9098</VALUE> </PROPERTY>
+ <PROPERTY NAME="SocketType" TYPE="string"> <VALUE>stream</VALUE> </PROPERTY>
+ <PROPERTY NAME="Protocol" TYPE="string"> <VALUE>tcp</VALUE> </PROPERTY>
+ <PROPERTY NAME="Wait" TYPE="boolean"> <VALUE>false</VALUE> </PROPERTY>
+ <PROPERTY NAME="Disable" TYPE="boolean"> <VALUE>true</VALUE> </PROPERTY>
+ <PROPERTY NAME="OnlyFrom" TYPE="string"> <VALUE.ARRAY> <VALUE>127.0.0.1</VALUE> </VALUE.ARRAY> </PROPERTY>
+ <PROPERTY NAME="EntryName" TYPE="string"> <VALUE>services</VALUE> </PROPERTY>
+ <PROPERTY NAME="Description" TYPE="string"> <VALUE># default: off
+# description: An internal xinetd service, listing active services.</VALUE> </PROPERTY>
+</INSTANCE>
+
+<INSTANCE CLASSNAME="Linux_XinetdConfigFile">
+ <PROPERTY NAME="Disable" TYPE="boolean"> <VALUE>true</VALUE> </PROPERTY>
+ <PROPERTY NAME="Type" TYPE="string"> <VALUE>RPC UNLISTED</VALUE> </PROPERTY>
+ <PROPERTY NAME="SocketType" TYPE="string"> <VALUE>stream</VALUE> </PROPERTY>
+ <PROPERTY NAME="User" TYPE="string"> <VALUE>root</VALUE> </PROPERTY>
+ <PROPERTY NAME="Group" TYPE="string"> <VALUE>nobody</VALUE> </PROPERTY>
+ <PROPERTY NAME="Server" TYPE="string"> <VALUE>/usr/bin/fam</VALUE> </PROPERTY>
+ <PROPERTY NAME="Wait" TYPE="boolean"> <VALUE>true</VALUE> </PROPERTY>
+ <PROPERTY NAME="Protocol" TYPE="string"> <VALUE>tcp</VALUE> </PROPERTY>
+ <PROPERTY NAME="RPCVersion" TYPE="string"> <VALUE>2</VALUE> </PROPERTY>
+ <PROPERTY NAME="RPCNumber" TYPE="uint32"> <VALUE>391002</VALUE> </PROPERTY>
+ <PROPERTY NAME="Bind" TYPE="string"> <VALUE>127.0.0.1</VALUE> </PROPERTY>
+ <PROPERTY NAME="EntryName" TYPE="string"> <VALUE>sgi_fam</VALUE> </PROPERTY>
+ <PROPERTY NAME="Description" TYPE="string"> <VALUE># default: on
+# description: FAM is a file monitoring daemon. It can \
+# be used to get reports when files change.</VALUE> </PROPERTY>
+</INSTANCE>
+
+<INSTANCE CLASSNAME="Linux_XinetdConfigFile">
+ <PROPERTY NAME="Port" TYPE="uint16"> <VALUE>901</VALUE> </PROPERTY>
+ <PROPERTY NAME="SocketType" TYPE="string"> <VALUE>stream</VALUE> </PROPERTY>
+ <PROPERTY NAME="Wait" TYPE="boolean"> <VALUE>false</VALUE> </PROPERTY>
+ <PROPERTY NAME="User" TYPE="string"> <VALUE>root</VALUE> </PROPERTY>
+ <PROPERTY NAME="Server" TYPE="string"> <VALUE>/usr/sbin/swat</VALUE> </PROPERTY>
+ <PROPERTY NAME="Disable" TYPE="boolean"> <VALUE>true</VALUE> </PROPERTY>
+ <PROPERTY NAME="OnlyFrom" TYPE="string"> <VALUE.ARRAY> <VALUE>127.0.0.1</VALUE> </VALUE.ARRAY> </PROPERTY>
+ <PROPERTY NAME="LogOnFailure" TYPE="string"> <VALUE.ARRAY> <VALUE>+(USERID)</VALUE> </VALUE.ARRAY> </PROPERTY>
+ <PROPERTY NAME="EntryName" TYPE="string"> <VALUE>swat</VALUE> </PROPERTY>
+ <PROPERTY NAME="Description" TYPE="string"> <VALUE># default: off
+# description: SWAT is the Samba Web Admin Tool. Use swat \
+#	       to configure your Samba server. To use SWAT, \
+#	       connect to port 901 with your favorite web browser.</VALUE> </PROPERTY>
+</INSTANCE>
+
+<INSTANCE CLASSNAME="Linux_XinetdConfigFile">
+ <PROPERTY NAME="Disable" TYPE="boolean"> <VALUE>true</VALUE> </PROPERTY>
+ <PROPERTY NAME="SocketType" TYPE="string"> <VALUE>dgram</VALUE> </PROPERTY>
+ <PROPERTY NAME="Wait" TYPE="boolean"> <VALUE>true</VALUE> </PROPERTY>
+ <PROPERTY NAME="User" TYPE="string"> <VALUE>nobody</VALUE> </PROPERTY>
+ <PROPERTY NAME="Group" TYPE="string"> <VALUE>tty</VALUE> </PROPERTY>
+ <PROPERTY NAME="Server" TYPE="string"> <VALUE>/usr/sbin/in.talkd</VALUE> </PROPERTY>
+ <PROPERTY NAME="EntryName" TYPE="string"> <VALUE>talk</VALUE> </PROPERTY>
+ <PROPERTY NAME="Description" TYPE="string"> <VALUE># default: off
+# description: The talk server accepts talk requests for chatting with users \
+#	on other systems.</VALUE> </PROPERTY>
+</INSTANCE>
+
+<INSTANCE CLASSNAME="Linux_XinetdConfigFile">
+ <PROPERTY NAME="Disable" TYPE="boolean"> <VALUE>false</VALUE> </PROPERTY>
+ <PROPERTY NAME="Flags" TYPE="string"> <VALUE>REUSE</VALUE> </PROPERTY>
+ <PROPERTY NAME="SocketType" TYPE="string"> <VALUE>stream</VALUE> </PROPERTY>
+ <PROPERTY NAME="Wait" TYPE="boolean"> <VALUE>false</VALUE> </PROPERTY>
+ <PROPERTY NAME="User" TYPE="string"> <VALUE>root</VALUE> </PROPERTY>
+ <PROPERTY NAME="Server" TYPE="string"> <VALUE>/usr/sbin/in.telnetd</VALUE> </PROPERTY>
+ <PROPERTY NAME="LogOnFailure" TYPE="string"> <VALUE.ARRAY> <VALUE>+(USERID)</VALUE> </VALUE.ARRAY> </PROPERTY>
+ <PROPERTY NAME="EntryName" TYPE="string"> <VALUE>telnet</VALUE> </PROPERTY>
+ <PROPERTY NAME="Description" TYPE="string"> <VALUE># default: on
+# description: The telnet server serves telnet sessions; it uses \
+#	unencrypted username/password pairs for authentication.</VALUE> </PROPERTY>
+</INSTANCE>
+
+<INSTANCE CLASSNAME="Linux_XinetdConfigFile">
+ <PROPERTY NAME="Disable" TYPE="boolean"> <VALUE>true</VALUE> </PROPERTY>
+ <PROPERTY NAME="SocketType" TYPE="string"> <VALUE>dgram</VALUE> </PROPERTY>
+ <PROPERTY NAME="Protocol" TYPE="string"> <VALUE>udp</VALUE> </PROPERTY>
+ <PROPERTY NAME="Wait" TYPE="boolean"> <VALUE>true</VALUE> </PROPERTY>
+ <PROPERTY NAME="User" TYPE="string"> <VALUE>root</VALUE> </PROPERTY>
+ <PROPERTY NAME="Server" TYPE="string"> <VALUE>/usr/sbin/in.tftpd</VALUE> </PROPERTY>
+ <PROPERTY NAME="ServerArgs" TYPE="string"> <VALUE>-s /tftpboot</VALUE> </PROPERTY>
+ <PROPERTY NAME="PerSource" TYPE="string"> <VALUE>11</VALUE> </PROPERTY>
+ <PROPERTY NAME="ConnectionsPerSecond" TYPE="uint32"> <VALUE>100</VALUE> </PROPERTY>
+ <PROPERTY NAME="ReenableDelay" TYPE="uint32"> <VALUE>2</VALUE> </PROPERTY>
+ <PROPERTY NAME="EntryName" TYPE="string"> <VALUE>tftp</VALUE> </PROPERTY>
+ <PROPERTY NAME="Description" TYPE="string"> <VALUE># default: off
+# description: The tftp server serves files using the trivial file transfer \
+#	protocol.  The tftp protocol is often used to boot diskless \
+#	workstations, download configuration files to network-aware printers, \
+#	and to start the installation process for some operating systems.</VALUE> </PROPERTY>
+</INSTANCE>
+
+<INSTANCE CLASSNAME="Linux_XinetdConfigFile">
+ <PROPERTY NAME="Disable" TYPE="boolean"> <VALUE>true</VALUE> </PROPERTY>
+ <PROPERTY NAME="Type" TYPE="string"> <VALUE>INTERNAL</VALUE> </PROPERTY>
+ <PROPERTY NAME="Id" TYPE="string"> <VALUE>time-stream</VALUE> </PROPERTY>
+ <PROPERTY NAME="SocketType" TYPE="string"> <VALUE>stream</VALUE> </PROPERTY>
+ <PROPERTY NAME="Protocol" TYPE="string"> <VALUE>tcp</VALUE> </PROPERTY>
+ <PROPERTY NAME="User" TYPE="string"> <VALUE>root</VALUE> </PROPERTY>
+ <PROPERTY NAME="Wait" TYPE="boolean"> <VALUE>false</VALUE> </PROPERTY>
+ <PROPERTY NAME="EntryName" TYPE="string"> <VALUE>time-stream</VALUE> </PROPERTY>
+ <PROPERTY NAME="Description" TYPE="string"> <VALUE># default: off
+# description: An RFC 868 time server. This is the tcp \
+# version, which is used by rdate.</VALUE> </PROPERTY>
+</INSTANCE>
+
+<INSTANCE CLASSNAME="Linux_XinetdConfigFile">
+ <PROPERTY NAME="Disable" TYPE="boolean"> <VALUE>true</VALUE> </PROPERTY>
+ <PROPERTY NAME="Type" TYPE="string"> <VALUE>INTERNAL UNLISTED</VALUE> </PROPERTY>
+ <PROPERTY NAME="Id" TYPE="string"> <VALUE>time-dgram</VALUE> </PROPERTY>
+ <PROPERTY NAME="SocketType" TYPE="string"> <VALUE>dgram</VALUE> </PROPERTY>
+ <PROPERTY NAME="Protocol" TYPE="string"> <VALUE>udp</VALUE> </PROPERTY>
+ <PROPERTY NAME="User" TYPE="string"> <VALUE>root</VALUE> </PROPERTY>
+ <PROPERTY NAME="Wait" TYPE="boolean"> <VALUE>true</VALUE> </PROPERTY>
+ <PROPERTY NAME="Port" TYPE="uint16"> <VALUE>37</VALUE> </PROPERTY>
+ <PROPERTY NAME="EntryName" TYPE="string"> <VALUE>time-dgram</VALUE> </PROPERTY>
+ <PROPERTY NAME="Description" TYPE="string"> <VALUE># default: off
+# description: An RFC 868 time server. This is the udp \
+# version.</VALUE> </PROPERTY>
+</INSTANCE>
+
+<INSTANCE CLASSNAME="Linux_XinetdConfigFile">
+ <PROPERTY NAME="Disable" TYPE="boolean"> <VALUE>true</VALUE> </PROPERTY>
+ <PROPERTY NAME="SocketType" TYPE="string"> <VALUE>stream</VALUE> </PROPERTY>
+ <PROPERTY NAME="Wait" TYPE="boolean"> <VALUE>false</VALUE> </PROPERTY>
+ <PROPERTY NAME="User" TYPE="string"> <VALUE>root</VALUE> </PROPERTY>
+ <PROPERTY NAME="Server" TYPE="string"> <VALUE>/usr/sbin/vsftpd</VALUE> </PROPERTY>
+ <PROPERTY NAME="Nice" TYPE="sint16"> <VALUE>10</VALUE> </PROPERTY>
+ <PROPERTY NAME="EntryName" TYPE="string"> <VALUE>ftp</VALUE> </PROPERTY>
+ <PROPERTY NAME="Description" TYPE="string"> <VALUE># default: off
+# description: The vsftpd FTP server serves FTP connections. It uses \
+#	normal, unencrypted usernames and passwords for authentication.</VALUE> </PROPERTY>
+</INSTANCE>
+
+<INSTANCE CLASSNAME="Linux_XinetdConfigFile">
+ <PROPERTY NAME="Disable" TYPE="boolean"> <VALUE>true</VALUE> </PROPERTY>
+ <PROPERTY NAME="SocketType" TYPE="string"> <VALUE>stream</VALUE> </PROPERTY>
+ <PROPERTY NAME="Wait" TYPE="boolean"> <VALUE>false</VALUE> </PROPERTY>
+ <PROPERTY NAME="User" TYPE="string"> <VALUE>root</VALUE> </PROPERTY>
+ <PROPERTY NAME="Server" TYPE="string"> <VALUE>/usr/sbin/in.ftpd</VALUE> </PROPERTY>
+ <PROPERTY NAME="ServerArgs" TYPE="string"> <VALUE>-l -a</VALUE> </PROPERTY>
+ <PROPERTY NAME="Nice" TYPE="sint16"> <VALUE>10</VALUE> </PROPERTY>
+ <PROPERTY NAME="LogOnSuccess" TYPE="string"> <VALUE.ARRAY> <VALUE>+(DURATION)</VALUE> </VALUE.ARRAY> </PROPERTY>
+ <PROPERTY NAME="EntryName" TYPE="string"> <VALUE>ftp</VALUE> </PROPERTY>
+ <PROPERTY NAME="Description" TYPE="string"> <VALUE># default: on
+# description: The wu-ftpd FTP server serves FTP connections. It uses \
+#	normal, unencrypted usernames and passwords for authentication.</VALUE> </PROPERTY>
+</INSTANCE>
+
+<INSTANCE CLASSNAME="Linux_XinetdConfigFile">
+ <PROPERTY NAME="Instances" TYPE="string"> <VALUE>60</VALUE> </PROPERTY>
+ <PROPERTY NAME="LogType" TYPE="string"> <VALUE>SYSLOG authpriv</VALUE> </PROPERTY>
+ <PROPERTY NAME="ConnectionsPerSecond" TYPE="uint32"> <VALUE>25</VALUE> </PROPERTY>
+ <PROPERTY NAME="ReenableDelay" TYPE="uint32"> <VALUE>30</VALUE> </PROPERTY>
+ <PROPERTY NAME="LogOnSuccess" TYPE="string"> <VALUE.ARRAY> <VALUE>HOST PID</VALUE> </VALUE.ARRAY> </PROPERTY>
+ <PROPERTY NAME="LogOnFailure" TYPE="string"> <VALUE.ARRAY> <VALUE>HOST</VALUE> </VALUE.ARRAY> </PROPERTY>
+ <PROPERTY NAME="EntryName" TYPE="string"> <VALUE>defaults</VALUE> </PROPERTY>
+ <PROPERTY NAME="Description" TYPE="string"> <VALUE>#
+# Simple configuration file for xinetd
+#
+# Some defaults, and include /etc/xinetd.d/</VALUE> </PROPERTY>
+</INSTANCE>
+

@@ -1,0 +1,15 @@
+********************************************************************************
+class : Linux_NFSv3SystemSetting
+
+--------------------------------------------------------------------------------
+Linux_NFSv3SystemSetting : -eq -cmd egrep -v "^\#.*" /etc/exports | awk '{i++} END {if(i>0)i--;print i-0}' RS='('
+
+--------------------------------------------------------------------------------
+SystemCreationClassName : -eq Linux_ComputerSystem
+SystemName : -eq -cmd hostname -f
+CreationClassName : -eq Linux_NFSv3SystemSetting
+Filename : -eq /etc/exports
+Readable : -eq -cmd if [[ `stat -c "%A" /etc/exports` = ?r* ]]; then echo TRUE; else echo FALSE; fi
+Writeable : -eq -cmd if [[ `stat -c "%A" /etc/exports` = ??w* ]]; then echo TRUE; else echo FALSE; fi
+SettingID : -set
+Directory : -set

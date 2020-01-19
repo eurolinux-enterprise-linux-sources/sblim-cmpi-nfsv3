@@ -1,0 +1,224 @@
+SBLIM Linux NFSv3 Instrumentation for CMPI README
+
+Overview:
+--------
+This package provides SBLIM instrumentation to expose the entries
+in the /etc/exports file, containing the directories, remote hosts,
+and parameters for exporting local directories via NFSv3
+
+The /etc/exports file is treated a a regular configuration file, and
+therefore this provider implements the SBLIM instrumentation for it
+using the general purpose config file framework, as described below.
+The entries in /etc/exports can be read into CIM and changes written
+back to the file. New entries to the config file can also be added
+and deleted.
+
+See the 'exports' man pages for more info on the /etc/exports file format.
+
+
+Directory Structure
+-------------------
+This directory contains the top-level CMPI interface for the generic
+Linux_SystemConfiguration provider modules.
+
+The ./mof subdirectory contains the CIM class mof templates for the
+Linux_SystemConfiguration class. Linux_SystemSetting.mof must be
+customized with the specific properties and CIM types of
+the configuration file settings. The ./mof directory also contains
+template mofs for the Linux_SystemConfiguration and Linux_SettingContext
+classes, which need to be customized with the new
+Linux_SystemConfiguration classnames.
+
+The ./mof subdirectory also contains Pegasus registration mofs for all
+the providers, which need to be customized with the new
+Linux_SystemConfiguration classname. The Pegasus registration mofs are
+only needed if registering the providers with the Pegasus cimom.
+
+The ./util subdirectory contains the utility programs that do most of the hard work
+in extracting instance information from the config file and putting it into CIM and
+writing changes back to the config file.
+
+The ./util/parser subdirectory contains the config file parser -
+this is the probably the most important and difficult component to write
+for a new config file provider!
+
+The ./util/instance2string subdirectory
+contains the function to format a CIM instance to an appropriate config
+file entry. This function is only required if the Linux_ConfigFile provider
+supports writeback operations. 
+
+
+Linux_SystemConfiguration Provider
+----------------------------------
+The provider source code file Linux_SystemConfiguration.c contains the
+top-level CMPI interface for reading a single instance to represent
+the Linux system configuration in question; e.g. NFSv3.
+The provider implements the following CMPI functions:
+
+        EnumInstanceNames()
+        EnumInstances()
+        GetInstance()
+
+All the calls return a single instance with the configuration name (e.g. "NFSv3")
+and the name of the configuration file (e.g. "/etc/exports").
+It is also possible to find the specific system settings associated with
+this configuration by examining the instance's CIM associations (see below).
+
+The provider source code file Linux_SystemConfiguration.c is 99.9% class
+independent. The *only* change that is required is to put the new classname
+in the CMInstanceMIStub() macro at the end of the file. You must also
+rename the Linux_SystemConfiguration.c file to the appropriate classname,
+e.g. Linux_NFSv3SystemConfiguration.c
+
+
+Linux_SystemSetting Provider
+----------------------------
+The provider source code file Linux_SystemSetting.c contains the
+top-level CMPI interface for reading/writing the individual settings in
+the config file. The provider implements the following CMPI functions:
+
+	EnumInstanceNames()
+	EnumInstances()
+	GetInstance()
+
+If the provider implements the optional instance2string() function then
+the following writeback CMPI functions are also implemented:
+
+	SetInstance()
+	CreateInstance()
+	DeleteInstance()
+
+The provider library source code file Linux_SystemSetting.c is 99.9% class
+independent. The *only* change that is required is to put the new classname
+in the CMInstanceMIStub() macro at the end of the file. You must also 
+rename the Linux_SystemSetting.c file to the appropriate classname, 
+e.g. Linux_NFSv3SystemSetting.c
+
+
+Linux_SettingContext Provider
+-----------------------------
+The provider course code file Linux_SettingContext.c contains the
+association provider that links a single Linux_SystemConfiguration instance
+(e.g. NFSv3) with *all* its Linux_SystemSetting setting instances.
+The provider implements the following CMPI functions:
+
+        EnumInstanceNames()
+        EnumInstances()
+        GetInstance()
+	AssociatorNames()
+	Associators()
+	ReferenceNames()
+	References()
+
+These functions will map either a given Linux_SystemConfiguration to
+*all* it associated Linux_SystemSetting settings, or map a given
+single Linux_SystemSetting setting to its associated Linux_SystemConfiguration.
+i.e. Linux_SystemConfiguration --> Linux_SystemSettings, or
+Linux_SystemSetting --> Linux_SystemConfiguration
+
+The provider library source code file Linux_SystemContext.c is 99.9% class
+independent. The *only* change that is required is to put the new classname
+in the CMAssociationMIStub() macro at the end of the file. You must also
+rename the Linux_SettingContext.c file to the appropriate classname,
+e.g. Linux_NFSv3SettingContext.c
+
+	
+See also the README files in the subdirectories for further information.
+
+
+For more information about the general-purpose Linux_SystemConfiguration
+provider framework for exposing generic configuration files thru CIM,
+please contact Gareth Bestor <bestorga@us.ibm.com>
+
+
+Build Instructions
+------------------
+
+
+Prerequisites
+.............
+- CIMOM installed
+- CMPI enabled CIMOM
+- CIM Schema Version 2.7 or higher loaded into the CIMOM's
+  repository
+- to enable Testsuite support:
+  SBLIM package sblim-testsuite installed
+- sblim-cmpi-devel package installed
+- sblim-cmpi-base package installed
+
+
+Building CIMOM and CMPI for this CIMOM
+.........................................
+
+CMPI support is available for SBLIM's sfcb, OpenPegasus, OpenCimom
+(former SNIA CIMOM) and OpenWBEM
+
+- sfcb      ... CMPI as only provider interface
+- Pegasus   ... CMPI is part of Pegasus
+- OpenCimom ... install SBLIM cmpi-adapter for snia (please follow 
+                the instructions in the README.cmpi file of SBLIM's
+                cmpi-adapter package)
+- OpenWBEM  ... CMPI is part of OpenWBEM
+
+
+Building cmpi-base
+..................
+Please follow the instructions in the README file of the 
+cmpi-base package.
+
+
+Building cmpi-nfsv3
+.....................
+
+This package is now GNU autotool enabled, refer to the file
+named INSTALL for generic instructions.
+
+The generated configure script tries to determine where the CMPI header files
+are located. For this purpose it searches a set of well-known locations.
+The "canonical" location is /usr/include/cmpi or /usr/local/include/cmpi,
+depending on how configure is invoked.
+
+Further, configure "determines" where providers are to be installed. Actually,
+there's no detection logic. The provider directory will always be
+/usr/lib/cmpi or /usr/local/lib/cmpi. If a CIM server requires a particular
+directory this can be selected by specifying the PROVIDERDIR variable.
+
+And finally, configure tries to find out which CIM server type is being used.
+This is necessary in order to select the appropriate schema and provider
+registration technique. If the CIM server is not or incorrectly identified,
+it is possible to specify it via the CIMSERVER variable.
+Supported values are pegasus, sfcb, openwbem and sniacimom.
+
+For instance, in order to configure for a locally installed Pegasus you can
+issue the following command:
+./configure CIMSERVER=pegasus PROVIDERDIR=$PEGASUS_HOME/lib
+
+
+
+Load Schema into CIMOM's repository
+...................................
+
+with Pegasus/sfcb :
+.................
+The loading and registering of the classes/associations and
+their provider is done during the "make postinstall".
+
+with OpenCimom/SNIA CIMOM :
+...........................
+Start the cimbrowser (/usr/sniacimom/bin). Load the schema
+file Linux_Base.mof with "File" -> "Reload Mof" into the 
+namespace root/cimv2. Before at least CIM Core and System
+schemata have to be loaded into the repository.
+
+
+
+Automated Function Verifcation Test 
+-----------------------------------
+
+The sub directory test contains the configuration files,
+necessary to drive the SBLIM Test Suite. The SBLIM Test
+Suite is a tool to automate function verification tests
+of providers. 
+
+How to set up and drive the test is described in the 
+README.TEST file.
